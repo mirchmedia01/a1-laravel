@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
         <div class="relative">
             <div class="aspect-square rounded-[30px] md:rounded-[40px] overflow-hidden border-8 md:border-[12px] border-black shadow-2xl group">
-                <img src="/images/homepage/about-team.png" alt="A1 Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <img src="/images/homepage/about-team.webp" alt="A1 Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             </div>
             <div class="absolute -bottom-4 md:-bottom-8 -left-4 md:-left-8 bg-accent p-4 md:p-8 rounded-[24px] md:rounded-[32px] border-4 md:border-8 border-white shadow-xl rotate-[-4deg] hover:rotate-0 transition-transform duration-500">
                 <span class="text-black font-heading text-2xl md:text-4xl leading-none block">{{ t('since') }}</span>

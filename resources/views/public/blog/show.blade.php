@@ -58,7 +58,7 @@
                 @foreach($relatedBlogs as $rb)
                 <a href="{{ $p }}/blog/{{ $rb['slug'] }}" class="group bg-white/3 border border-white/10 rounded-[30px] overflow-hidden hover:border-accent/40 transition-all">
                     <div class="aspect-16/9 overflow-hidden">
-                        <img src="{{ $rb['coverImage'] ?? '/images/training/personal-training-hero.png' }}" alt="{{ $rb['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <img src="{{ $rb['coverImage'] ?? '/images/training/personal-training-hero.webp' }}" alt="{{ $rb['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <span class="text-accent text-[10px] font-black uppercase tracking-widest">{{ $rb['category'] ?? 'Wellness' }}</span>

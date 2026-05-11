@@ -50,23 +50,9 @@
             </div>
         </div>
 
-        @php $reviewsFaqs = [
-            ['q' => 'How do I leave a review?', 'qEs' => '¿Cómo puedo dejar una reseña?', 'a' => 'You can leave a review on our Google page or Yelp. We appreciate all feedback!', 'aEs' => 'Puedes dejar una reseña en nuestra página de Google o Yelp. ¡Apreciamos todo tipo de comentarios!'],
-            ['q' => 'Can I talk to past clients?', 'qEs' => '¿Puedo hablar con clientes anteriores?', 'a' => 'We can connect you with a current client who can share their experience. Ask during your free consultation.', 'aEs' => 'Podemos conectarte con un cliente actual que pueda compartir su experiencia. Pregunta durante tu consulta gratuita.'],
-            ['q' => 'Do you have more testimonials?', 'qEs' => '¿Tienen más testimonios?', 'a' => 'Yes! Visit our Google Reviews page for hundreds more reviews from real clients.', 'aEs' => '¡Sí! Visita nuestra página de Google Reviews para cientos más de reseñas de clientes reales.'],
-        ]; @endphp
         <div class="max-w-3xl mx-auto px-4 pb-16">
-            <h2 class="text-3xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ t('frequently_asked_questions') }}</h2>
-            <div class="space-y-4" x-data="{ openFaq: null }">
-                @foreach($reviewsFaqs as $i => $faq)
-                <div class="bg-lightGray border border-gray-200 rounded-2xl overflow-hidden" x-data="{ open: false }">
-                    <button @click="open = !open" class="w-full flex items-center justify-between p-6 text-left">
-                        <span class="text-asphaltBlack font-bold text-lg pr-4">{{ $isEs ? $faq['qEs'] : $faq['q'] }}</span>
-                        <svg class="w-5 h-5 text-accent shrink-0" :class="open ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div x-show="open" x-cloak class="px-6 pb-6">
-                        <p class="text-gray-600 leading-relaxed">{{ $isEs ? $faq['aEs'] : $faq['a'] }}</p>
-                    </div>
+            <x-faq-accordion :faqs="load_faq('reviews')" title="{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}" :headingClass="'text-3xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack'" :itemClass="'bg-lightGray border border-gray-200 rounded-2xl overflow-hidden'" :contentClass="'text-gray-600 leading-relaxed'" />
+        </div>
                 </div>
                 @endforeach
             </div>

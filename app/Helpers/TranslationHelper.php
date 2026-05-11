@@ -50,3 +50,27 @@ if (! function_exists('tc')) {
         return is_array($value) ? $value : [];
     }
 }
+
+if (! function_exists('load_faq')) {
+    function load_faq(string $page, ?string $locale = null): array
+    {
+        static $cache = [];
+        $locale = $locale ?? App::getLocale();
+        $cacheKey = "{$page}:{$locale}";
+        if (isset($cache[$cacheKey])) {
+            return $cache[$cacheKey];
+        }
+
+        $faqPath = content_path('faq.json');
+        if (! file_exists($faqPath)) {
+            return [];
+        }
+
+        $allFaqs = json_decode(file_get_contents($faqPath), true);
+        $faqs = $allFaqs[$page] ?? [];
+
+        $cache[$cacheKey] = $faqs;
+
+        return $faqs;
+    }
+}

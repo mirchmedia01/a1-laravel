@@ -74,27 +74,6 @@
             </div>
         </section>
 
-        @php $aboutFaqs = [
-            ['q' => 'How long has A1 Training Group been in business?', 'qEs' => '¿Cuánto tiempo lleva A1 Training Group en el negocio?', 'a' => 'Founded in 2012, we\'ve been serving Manhattan and the Hamptons for over a decade.', 'aEs' => 'Fundado en 2012, hemos estado sirviendo a Manhattan y los Hamptons por más de una década.'],
-            ['q' => 'What makes A1 different from other trainers?', 'qEs' => '¿Qué hace diferente a A1 de otros entrenadores?', 'a' => 'We bring the gym to you — mobile training with full equipment. Plus, our team includes actual Doctors of Physical Therapy.', 'aEs' => 'Llevamos el gimnasio a ti — entrenamiento móvil con equipo completo. Además, nuestro equipo incluye Doctores en Terapia Física.'],
-            ['q' => 'Do I need gym equipment?', 'qEs' => '¿Necesito equipo de gimnasio?', 'a' => 'Not at all. Our mobile trainers bring everything needed — kettlebells, bands, TRX, and more. We can also optimize your home or building gym.', 'aEs' => 'Para nada. Nuestros entrenadores móviles traen todo lo necesario — pesas, bandas, TRX y más.'],
-            ['q' => 'What\'s included in the free consultation?', 'qEs' => '¿Qué incluye la consulta gratuita?', 'a' => 'A 15-minute call to discuss your goals, followed by a complimentary in-person session to experience our training style.', 'aEs' => 'Una llamada de 15 minutos para discutir tus metas, seguida de una sesión presencial complementaria para experimentar nuestro estilo de entrenamiento.'],
-        ]; @endphp
-        <section class="max-w-3xl mx-auto px-4 py-24">
-            <h2 class="text-3xl md:text-4xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ t('frequently_asked_questions') }}</h2>
-            <div class="space-y-4" x-data="{ openFaq: null }">
-                @foreach($aboutFaqs as $i => $faq)
-                <div class="bg-lightGray border border-gray-200 rounded-2xl overflow-hidden" x-data="{ open: false }">
-                    <button @click="open = !open" class="w-full flex items-center justify-between p-6 text-left">
-                        <span class="text-asphaltBlack font-bold text-lg pr-4">{{ $isEs ? $faq['qEs'] : $faq['q'] }}</span>
-                        <svg class="w-5 h-5 text-accent shrink-0" :class="open ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div x-show="open" x-cloak class="px-6 pb-6">
-                        <p class="text-gray-600 leading-relaxed">{{ $isEs ? $faq['aEs'] : $faq['a'] }}</p>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </section>
+        <x-faq-accordion :faqs="load_faq('about')" title="{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}" :sectionClass="'max-w-3xl mx-auto px-4 py-24'" :headingClass="'text-3xl md:text-4xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack'" :itemClass="'bg-lightGray border border-gray-200 rounded-2xl overflow-hidden'" :contentClass="'text-gray-600 leading-relaxed'" />
     </div>
 </x-layouts.public>

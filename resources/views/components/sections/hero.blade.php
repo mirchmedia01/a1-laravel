@@ -55,7 +55,7 @@
                 <div class="grid grid-cols-2 gap-4 md:gap-6 relative z-10">
                     <div class="space-y-4 md:space-y-6 pt-6 md:pt-12">
                         <div class="aspect-4/5 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl relative group border-2 md:border-4 border-white">
-                            <img src="/images/training/train-at-studio.png" alt="Elite Training" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+                            <img src="/images/training/train-at-studio.webp" alt="Elite Training" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6">
                                 <span class="bg-black/90 backdrop-blur px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[8px] md:text-[10px] font-black text-accent uppercase tracking-widest border border-accent/30 group-hover:bg-accent group-hover:text-black transition-all duration-300">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="space-y-4 md:space-y-6">
                         <div class="aspect-3/4 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl relative group border-2 md:border-4 border-white">
-                            <img src="/images/training/personal-training-hero.png" alt="Elite Fitness" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
+                            <img src="/images/training/personal-training-hero.webp" alt="Elite Fitness" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
                             <div class="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6 bg-accent p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-xl translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                 <p class="text-black text-[8px] md:text-[10px] font-black leading-tight uppercase tracking-tighter">
                                     {{ t('your_goals_are_our_mission_nycs_best_elite_fitness') }}

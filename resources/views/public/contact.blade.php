@@ -58,22 +58,7 @@
                             <h3 class="font-heading text-2xl font-black uppercase text-asphaltBlack">{{ t('common_questions') }}</h3>
                         </div>
                         <div class="space-y-4" x-data="{ openFaq: null }">
-                            @php $contactFaqs = [
-                                ['q' => 'Do I need to register in advance?', 'qEs' => '¿Necesito registrarme con anticipación?', 'a' => 'Yes, we recommend booking your free consultation in advance to ensure availability with the right trainer.', 'aEs' => 'Sí, recomendamos reservar tu consulta gratuita con anticipación para asegurar disponibilidad con el entrenador adecuado.'],
-                                ['q' => 'Do you come to my home?', 'qEs' => '¿Vienen a mi casa?', 'a' => 'Yes! Our mobile trainers bring everything needed. We serve Manhattan, Brooklyn, and the Hamptons.', 'aEs' => '¡Sí! Nuestros entrenadores móviles llevan todo el equipo necesario. Servimos Manhattan, Brooklyn y los Hamptons.'],
-                                ['q' => 'How much does it cost?', 'qEs' => '¿Cuánto cuesta?', 'a' => 'Personal training starts at $105/session for in-home and $135/session at the gym. Free consultation available.', 'aEs' => 'El entrenamiento personal comienza en $105/sesión a domicilio y $135/sesión en el gimnasio. Consulta gratuita disponible.'],
-                            ]; @endphp
-                            @foreach($contactFaqs as $i => $faq)
-                            <div class="bg-white rounded-xl shadow-sm" x-data="{ open: false }">
-                                <button @click="open = !open" class="w-full flex justify-between items-center p-4 text-left">
-                                    <span class="font-bold text-asphaltBlack pr-4">{{ $isEs ? $faq['qEs'] : $faq['q'] }}</span>
-                                    <span class="text-accent" :class="open ? 'rotate-180' : ''"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
-                                </button>
-                                <div x-show="open" x-cloak class="px-4 pb-4">
-                                    <p class="text-gray-500 text-sm leading-relaxed">{{ $isEs ? $faq['aEs'] : $faq['a'] }}</p>
-                                </div>
-                            </div>
-                            @endforeach
+                            <x-faq-accordion :faqs="load_faq('contact')" :title="''" :sectionClass="''" :headingClass="'hidden'" :itemClass="'bg-white rounded-xl shadow-sm'" :contentClass="'text-gray-500 text-sm leading-relaxed'" />
                         </div>
                     </div>
                 </div>

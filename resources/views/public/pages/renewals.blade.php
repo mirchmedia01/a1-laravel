@@ -28,28 +28,7 @@
             </div>
         </div>
     </section>
-    @php $faqs = [
-        ['q' => 'When should I renew?', 'qEs' => '¿Cuándo debo renovar?', 'a' => 'We recommend renewing when you have 2-3 sessions remaining to avoid any gap in your training consistency.', 'aEs' => 'Recomendamos renovar cuando te queden 2-3 sesiones para evitar cualquier interrupción en la consistencia de tu entrenamiento.'],
-        ['q' => 'Can I switch trainers when I renew?', 'qEs' => '¿Puedo cambiar de entrenador al renovar?', 'a' => 'Yes. You can request a different trainer or add additional services when renewing your package.', 'aEs' => 'Sí. Puedes solicitar un entrenador diferente o agregar servicios adicionales al renovar tu paquete.'],
-        ['q' => 'What happens if I don\'t use all my sessions?', 'qEs' => '¿Qué pasa si no uso todas mis sesiones?', 'a' => 'Session packages are valid for 12 months from the purchase date. Unused sessions expire after 12 months.', 'aEs' => 'Los paquetes de sesiones son válidos por 12 meses a partir de la fecha de compra. Las sesiones no utilizadas caducan después de 12 meses.'],
-        ['q' => 'Do you offer auto-renewal?', 'qEs' => '¿Ofrecen renovación automática?', 'a' => 'Yes. Monthly auto-renewal plans are available for clients who want hassle-free, continuous training.', 'aEs' => 'Sí. Los planes de renovación automática mensual están disponibles para clientes que desean entrenamiento continuo sin complicaciones.'],
-    ]; @endphp
-    <section class="px-4 pb-24">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ t('faqs') }}</h2>
-            <div class="space-y-4">
-                @foreach($faqs as $i => $faq)
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex justify-between items-center w-full text-left">
-                        <span class="text-white font-bold text-sm pr-4">{{ $isEs ? $faq['qEs'] : $faq['q'] }}</span>
-                        <svg class="w-4 h-4 text-accent shrink-0" :class="open ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div x-show="open" x-cloak class="mt-4 text-white/40 text-sm leading-relaxed">{{ $isEs ? $faq['aEs'] : $faq['a'] }}</div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+    <x-faq-accordion :faqs="load_faq('renewals')" title="{{ $isEs ? 'Preguntas Frecuentes' : 'FAQs' }}" />
 
     <x-sections.cta />
 </x-layouts.public>
