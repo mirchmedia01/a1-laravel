@@ -53,14 +53,16 @@ class SEOService
             return $memory[$slug];
         }
 
-        try {
-            $record = PageSEO::where('slug', $slug)->first();
-            if ($record) {
-                $memory[$slug] = $record->toArray();
-                return $memory[$slug];
+        if (extension_loaded('mongodb') && class_exists('MongoDB\Laravel\Eloquent\Model')) {
+            try {
+                $record = PageSEO::where('slug', $slug)->first();
+                if ($record) {
+                    $memory[$slug] = $record->toArray();
+                    return $memory[$slug];
+                }
+            } catch (\Throwable $e) {
+                // MongoDB unavailable, fall through
             }
-        } catch (\Exception $e) {
-            // MongoDB unavailable, fall through
         }
 
         $pages = load_content('pages_seo.json');
