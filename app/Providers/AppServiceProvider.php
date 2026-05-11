@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Request::setTrustedProxies(['*'], Request::HEADER_X_FORWARDED_ALL);
+
         if (! env('MONGODB_URI')) {
             config(['database.default' => 'sqlite']);
         }
