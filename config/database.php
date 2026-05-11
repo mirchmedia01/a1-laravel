@@ -5,7 +5,7 @@ use Pdo\Mysql;
 
 return [
 
-    'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     'connections' => [
 

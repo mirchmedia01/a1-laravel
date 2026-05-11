@@ -26,7 +26,7 @@ use Illuminate\View\ViewServiceProvider;
 use Laravel\Socialite\SocialiteServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Livewire\Volt\VoltServiceProvider;
-use MongoDB\Laravel\MongoDBServiceProvider;
+
 use Resend\Laravel\ResendServiceProvider;
 use Spatie\ResponseCache\ResponseCacheServiceProvider;
 use Spatie\Sitemap\SitemapServiceProvider;
@@ -94,7 +94,7 @@ return [
         // Package Service Providers
         LivewireServiceProvider::class,
         VoltServiceProvider::class,
-        MongoDBServiceProvider::class,
+        // MongoDBServiceProvider - registered conditionally in AppServiceProvider
         SocialiteServiceProvider::class,
         ResponseCacheServiceProvider::class,
         SitemapServiceProvider::class,
