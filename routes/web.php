@@ -83,9 +83,18 @@ Route::redirect('/service-page/a1-s-gym-s-complementary-session', '/services/con
 
 // ─── Health check (no middleware) ───
 Route::get('/health', function () {
+    $locale = app()->getLocale();
     $checks = [
         'app_key' => env('APP_KEY') ? 'set' : 'MISSING',
         'env' => app()->environment(),
+        'locale' => $locale,
+        'lang_file_exists' => file_exists(lang_path("{$locale}.json")) ? 'yes' : 'MISSING',
+        'lang_file_path' => lang_path("{$locale}.json"),
+        'nav_services_translation' => t('nav.services'),
+        'railway_edge' => $_SERVER['HTTP_X_RAILWAY_EDGE'] ?? 'not set',
+        'app_url' => env('APP_URL', 'not set'),
+        'session_domain' => config('session.domain'),
+        'asset_url' => config('app.asset_url'),
         'storage_writable' => is_writable(storage_path()),
         'views_writable' => is_writable(storage_path('framework/views')),
         'db_default' => config('database.default'),

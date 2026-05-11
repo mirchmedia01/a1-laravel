@@ -24,16 +24,26 @@ class AppServiceProvider extends ServiceProvider
     {
         Request::setTrustedProxies(['*'], Request::HEADER_X_FORWARDED_ALL);
 
-        $appUrl = env('APP_URL', '');
-        if (str_contains($appUrl, 'railway.app')) {
-            $httpsUrl = str_replace('http://', 'https://', $appUrl);
-            config(['app.url' => $httpsUrl]);
-            config(['app.asset_url' => $httpsUrl]);
-            URL::forceRootUrl($httpsUrl);
-            URL::forceScheme('https');
-        } elseif (env('APP_ENV') === 'production') {
+        // Force HTTPS in production-like environments
+        if (isset($_SERVER['HTTPS']) || env('APP_ENV') === 'production' || env('APP_URL') === 'https://a1-laravel-production.up.railway.app') {
             URL::forceScheme('https');
         }
+
+        // Override session domain when running on Railway
+        config(['session.domain' => null]);
+
+        if (! env('MONGODB_URI') || ! extension_loaded('mongodb')) {
+            config(['database.default' => 'sqlite']);
+        }
+
+        if (extension_loaded('mongodb')) {
+            try {
+                DB::connection('mongodb')->getMongoClient()->listDatabases();
+            } catch (\Throwable $e) {
+                config(['database.default' => 'sqlite']);
+            }
+        }
+    }
 
         if (! env('MONGODB_URI') || ! extension_loaded('mongodb')) {
             config(['database.default' => 'sqlite']);
