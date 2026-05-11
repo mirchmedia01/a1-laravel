@@ -24,8 +24,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Request::setTrustedProxies(['*'], Request::HEADER_X_FORWARDED_ALL);
 
-        // Force HTTPS in production-like environments
-        if (isset($_SERVER['HTTPS']) || env('APP_ENV') === 'production' || env('APP_URL') === 'https://a1-laravel-production.up.railway.app') {
+        // Force HTTPS behind Railway's edge proxy
+        if (isset($_SERVER['HTTPS'])
+            || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https'
+            || ($_SERVER['SERVER_PORT'] ?? '') === '443'
+            || env('APP_ENV') === 'production'
+        ) {
             URL::forceScheme('https');
         }
 
