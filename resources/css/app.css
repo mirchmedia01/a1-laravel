@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Theme */
+:root {
+    --color-accent: #c9a96e;
+    --color-asphaltBlack: #1a1a1a;
+}
+
+.accent-text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), #d4b87a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

@@ -1,0 +1,568 @@
+{
+  "personal-training": {
+    "studio": {
+      "title": "Let's Train at the Studio",
+      "titleEs": "Entrenemos en el Estudio",
+      "metaTitle": "Private Studio Personal Training | A1 Training Group",
+      "metaDescription": "Train in our exclusive Manhattan fitness studios. Bespoke strength coaching, kettlebell training, and physical therapy in a private, focused environment.",
+      "headline": "Your Sanctuary for Performance",
+      "headlineEs": "Tu Santuario para el Rendimiento",
+      "intro": "For the high-achieving individual, the standard gym environment is a distraction. At A1 Training Group, we offer an alternative: private personal training within our curated, high-end studio spaces. Our studios aren't just places to sweat; they are performance labs designed for those who value privacy and uncompromising results.",
+      "introEs": "Para la persona de alto rendimiento, el gimnasio estándar es una distracción. En A1 Training Group ofrecemos una alternativa: entrenamiento personal privado en nuestros espacios de estudio curados.",
+      "sections": [
+        {
+          "heading": "Absolute Privacy and Discretion",
+          "content": "Our studios provide a members-only feel. There are no crowds, no spectators, and no interruptions. This is an exclusive environment offering quality training without the social distractions of commercial gyms."
+        },
+        {
+          "heading": "Professional-Grade Equipment",
+          "content": "Our studios house specialized tools that even the best home setups often lack. From Olympic lifting platforms and kettlebells to Pilates reformers and medical-grade rehabilitation tools, we have the hardware to match your ambition."
+        },
+        {
+          "heading": "A Focused Mindset",
+          "content": "Stepping out of your home or office and into a dedicated high-performance space creates a psychological switch. You leave the stresses of the day at the door and focus entirely on your body."
+        }
+      ],
+      "ctas": ["Book Your Studio Consultation", "Schedule Your First Session"],
+      "faq": [
+        {
+          "q": "Where are your private studios located?",
+          "a": "We operate across key Manhattan neighborhoods, including Tribeca, SoHo, Chelsea, and the Upper East Side. Each location is chosen for discretion and accessibility."
+        },
+        {
+          "q": "How does studio training differ from a gym membership?",
+          "a": "At an A1 studio, the environment is controlled. You receive bespoke training with a dedicated specialist who has pre-staged your equipment. It's a white-glove service where the focus is 100% on your transformation."
+        },
+        {
+          "q": "Can I combine studio sessions with at-home training?",
+          "a": "Absolutely. Many of our clients use a hybrid model — training at home during the workweek and visiting our studio for specialized sessions on the weekends."
+        }
+      ]
+    },
+    "in-home": {
+      "title": "Bring the Workout to Me",
+      "titleEs": "Trae el Entrenamiento a Mí",
+      "metaTitle": "In-Home Personal Training | A1 Training Group",
+      "metaDescription": "Elite at-home fitness. A1 Training Group brings bespoke personal training directly to your home. White-glove concierge fitness at your doorstep.",
+      "headline": "The Ultimate In-Home Fitness Experience",
+      "headlineEs": "La Experiencia Fitness Definitiva en Casa",
+      "intro": "The ultimate luxury isn't just a gym; it's time. Our Bring the Workout to Me service delivers an elite fitness experience directly to your doorstep. Whether you reside in a luxury condo or a private home, we provide a white-glove service that transforms your personal space into a high-performance sanctuary.",
+      "introEs": "El lujo definitivo no es solo un gimnasio; es el tiempo. Nuestro servicio de entrenamiento a domicilio lleva una experiencia fitness de élite directamente a tu puerta.",
+      "sections": [
+        {
+          "heading": "We Bring the Gym to You",
+          "content": "Don't have a home gym? No problem. Our mobile trainers arrive with everything needed for a world-class session. From kettlebells and resistance bands to portable TRX systems, we turn any living room or terrace into a professional training zone."
+        },
+        {
+          "heading": "Building Gym Optimization",
+          "content": "Most modern residential towers feature world-class fitness centers that go underutilized. We help you maximize your building's amenities with programs designed around the specific equipment available in your facility."
+        },
+        {
+          "heading": "Total Privacy",
+          "content": "By choosing in-home training, you avoid the public eye of commercial gyms. Your home becomes a private laboratory for transformation, where you can focus entirely on your form and progress."
+        }
+      ],
+      "ctas": ["Book Your In-Home Consultation", "Schedule Your First Session"],
+      "faq": [
+        {
+          "q": "Do I need a lot of space?",
+          "a": "Not at all. Our trainers are experts at maximizing small spaces. Whether it's a dedicated home gym or a small area in your living room, we deliver an exclusive workout just as effective as a studio session."
+        },
+        {
+          "q": "Can you train me in my building's gym?",
+          "a": "Yes. We specialize in in-building training and work seamlessly with your building's management to provide a professional experience in your apartment gym."
+        },
+        {
+          "q": "Is in-home training as effective as a gym?",
+          "a": "Often more effective. Without the distractions of a public gym, your trainer can focus entirely on your movement. We bring the necessary equipment to ensure you hit the required resistance for strength training."
+        }
+      ]
+    },
+    "consult-studio": {
+      "title": "Kick Off With a Consult at The Studio",
+      "titleEs": "Comienza con una Consulta en el Estudio",
+      "metaTitle": "Studio Fitness Consultation | A1 Training Group",
+      "metaDescription": "Start your transformation with a comprehensive studio consultation. Biomechanical assessments, longevity coaching, and bespoke fitness roadmaps.",
+      "headline": "Precision Engineering for Your Body",
+      "headlineEs": "Ingeniería de Precisión para Tu Cuerpo",
+      "intro": "Your journey doesn't begin with a set of lunges or a mile on the treadmill. It begins with data. Our studio consultation is a comprehensive diagnostic event designed for those who demand a scientific, white-glove approach to their health.",
+      "introEs": "Tu viaje no comienza con una serie de estocadas o una milla en la cinta. Comienza con datos.",
+      "sections": [
+        {
+          "heading": "The Biomechanical Assessment",
+          "content": "Before we load a barbell or program a session, we must understand how you move. Our team performs a high-level movement screen to identify postural imbalances, joint mobility restrictions, and movement compensations that could lead to injury."
+        },
+        {
+          "heading": "Goals & Lifestyle Integration",
+          "content": "We sit down to discuss the why behind your what. Whether you're seeking longevity coaching or post-natal training, we align your fitness strategy with your calendar. We plan for your business travel, late-night dinners, and high-stakes schedule."
+        },
+        {
+          "heading": "Baseline Performance Testing",
+          "content": "Using specialized equipment available at our studio, we establish your baselines. This includes metabolic testing, strength ratios, and cardiovascular efficiency markers. This data allows us to provide truly bespoke training results."
+        }
+      ],
+      "ctas": ["Schedule Your Studio Diagnostic", "Book Your Biomechanical Evaluation"],
+      "faq": [
+        {
+          "q": "How should I prepare for my studio consultation?",
+          "a": "Wear comfortable athletic attire. Arrive 10 minutes early. If you have recent medical records or imaging related to an injury, bring those along."
+        },
+        {
+          "q": "Is the consultation a workout?",
+          "a": "It's a working assessment. While you will be moving and performing exercises, the primary goal is diagnostic. We want to see how your body responds to stimulus so we can build the best program for you."
+        },
+        {
+          "q": "What happens after the consult?",
+          "a": "You'll be paired with the trainer best suited for your goals. We then schedule your first formal session, either at the studio or in your home."
+        }
+      ]
+    },
+    "consult-home": {
+      "title": "Kick Off With a Consult at Home",
+      "titleEs": "Comienza con una Consulta en Casa",
+      "metaTitle": "In-Home Fitness Consultation | A1 Training Group",
+      "metaDescription": "Start your fitness journey at home. Elite in-home consultations providing biomechanical assessments and custom gym optimization.",
+      "headline": "Designing Your Private Performance Space",
+      "headlineEs": "Diseñando Tu Espacio de Rendimiento Privado",
+      "intro": "Your home is your sanctuary. We believe your fitness journey should begin where you feel most comfortable. This white-glove, 90-minute immersive experience bridges the gap between your private lifestyle and world-class athletic results.",
+      "introEs": "Tu hogar es tu santuario. Creemos que tu viaje fitness debe comenzar donde te sientas más cómodo.",
+      "sections": [
+        {
+          "heading": "Comprehensive Movement & Medical Audit",
+          "content": "Just like our studio sessions, your home consult begins with a clinical deep dive. We evaluate your posture and mobility in your own space, identifying how your furniture, office setup, and daily environment affect your biomechanics."
+        },
+        {
+          "heading": "Equipment Audit & Space Optimization",
+          "content": "If you have a home gym, we perform a full audit. We look at your current setup and show you how to maximize every piece of equipment. If you don't have equipment, we provide a curated list of essential tools."
+        },
+        {
+          "heading": "Recovery Assessment",
+          "content": "We evaluate your home's existing amenities — whether it's a sauna, cold plunge, or quiet space for mindfulness — to integrate recovery into a singular, cohesive ritual that prevents burnout."
+        }
+      ],
+      "ctas": ["Schedule Your At-Home Consultation", "Request a Private In-Home Assessment"],
+      "faq": [
+        {
+          "q": "Do I need to have a home gym ready?",
+          "a": "Not at all. Part of our service is helping you decide what equipment you might need. Many clients start with zero equipment."
+        },
+        {
+          "q": "Can the consult take place in my building's gym?",
+          "a": "Absolutely. We prefer to conduct part of the consult in your residential fitness center so we can build a program around your building's specific amenities."
+        },
+        {
+          "q": "Is this available in the Hamptons?",
+          "a": "Yes. During the summer months, we travel to seasonal residences to ensure your fitness routine remains uninterrupted."
+        }
+      ]
+    }
+  },
+  "massage-therapy": {
+    "studio": {
+      "title": "Let's Train at the Studio",
+      "titleEs": "Sesión de Recuperación en el Estudio",
+      "metaTitle": "Elite Massage & Recovery Studio | A1 Training Group",
+      "metaDescription": "Visit our private studio for the best massage therapy. From sports massage to executive decompression, our recovery services are designed for longevity.",
+      "headline": "Clinical Recovery in the Heart of Manhattan",
+      "headlineEs": "Recuperación Clínica en el Corazón de Manhattan",
+      "intro": "While our mobile services offer convenience, the A1 Studio is where our most advanced recovery services come to life. This is not a high-traffic spa; it is a clinical sanctuary designed for those who recognize that recovery is an active discipline.",
+      "introEs": "Aunque nuestros servicios móviles ofrecen conveniencia, el estudio A1 es donde nuestros servicios de recuperación más avanzados cobran vida.",
+      "sections": [
+        {
+          "heading": "Advanced Clinical Tools",
+          "content": "Access specialized therapeutic equipment including professional-grade percussive tools, specialized stretching tables, and advanced heat-therapy modalities."
+        },
+        {
+          "heading": "A Total Sensory Reset",
+          "content": "Step away from the noise of the city and the demands of your home office. Our studio is engineered to trigger the parasympathetic nervous system, allowing for deeper rest than can be achieved in a multi-use environment."
+        },
+        {
+          "heading": "Multi-Disciplinary Integration",
+          "content": "Within our walls, your massage specialist can collaborate directly with our trainers and coaches to ensure your soft-tissue work is perfectly synchronized with your structural goals."
+        }
+      ],
+      "ctas": ["Book Your Studio Recovery Session", "Schedule Your Advanced Session"],
+      "faq": [
+        {
+          "q": "How does the studio differ from an in-home massage?",
+          "a": "The studio offers a clinical sanctuary with access to our full suite of diagnostic tools and specialized therapeutic equipment."
+        },
+        {
+          "q": "Is the studio private?",
+          "a": "Yes. Your session is conducted in a low-density, highly private atmosphere with no crowds or public onlookers."
+        }
+      ]
+    },
+    "in-home": {
+      "title": "Bring the Recovery to Me",
+      "titleEs": "Trae la Recuperación a Mí",
+      "metaTitle": "In-Home Massage Therapy | A1 Training Group",
+      "metaDescription": "Experience the best massage therapy without leaving your home. Elite sports massage, deep tissue, and recovery services delivered to your door.",
+      "headline": "Your Home is Your Private Recovery Suite",
+      "headlineEs": "Tu Hogar es Tu Suite de Recuperación Privada",
+      "intro": "We eliminate the logistical stress of city travel by bringing the best massage therapy directly to your doorstep. We transform your residence into a world-class recovery sanctuary, allowing you to transition from the boardroom to the massage table in minutes.",
+      "introEs": "Eliminamos el estrés logístico del viaje llevando la mejor terapia de masaje directamente a tu puerta.",
+      "sections": [
+        {
+          "heading": "Zero-Transit Preservation",
+          "content": "The rest and digest state is fragile. By receiving treatment at home, you can remain in a state of total relaxation long after the therapist has left, maximizing the physiological benefits."
+        },
+        {
+          "heading": "Integrated Care",
+          "content": "Because we are a physical therapy and personal training group, your massage is not a blind session. Your therapist understands your training load, your injuries, and your goals."
+        },
+        {
+          "heading": "Elite Standards",
+          "content": "We arrive with professional-grade, heated tables, hypoallergenic oils, and premium linens. We don't just do a massage; we curate an environment."
+        }
+      ],
+      "ctas": ["Schedule Your In-Home Recovery", "Book Your Concierge Massage"],
+      "faq": [
+        {
+          "q": "Do I need to provide anything?",
+          "a": "No. Your therapist arrives fully prepared with a professional massage table, fresh linens, therapeutic-grade oils, and music. We only require a quiet space."
+        },
+        {
+          "q": "Is this service discreet?",
+          "a": "Privacy is our hallmark. Our staff is trained in white-glove protocols ensuring total confidentiality."
+        }
+      ]
+    },
+    "consult-studio": {
+      "title": "Kick Off With a Consult at The Studio",
+      "titleEs": "Consulta de Terapia de Masaje en el Estudio",
+      "metaTitle": "Massage Therapy Consultation | A1 Training Group",
+      "metaDescription": "Start your recovery journey with an elite massage therapy consultation. Diagnostic intake, postural analysis, and bespoke recovery planning.",
+      "headline": "Your Path to Precision Recovery",
+      "headlineEs": "Tu Camino hacia la Recuperación de Precisión",
+      "intro": "Elite recovery is never a matter of guesswork. Your journey begins with a comprehensive massage therapy consultation — a dedicated session where we move beyond the surface to understand your unique physiological architecture.",
+      "introEs": "La recuperación de élite nunca es cuestión de suposiciones. Tu viaje comienza con una consulta integral de terapia de masaje.",
+      "sections": [
+        {
+          "heading": "Structural & Postural Analysis",
+          "content": "We observe your kinetic chain in motion to see how desk work or frequent travel has altered your alignment."
+        },
+        {
+          "heading": "Myofascial Mapping",
+          "content": "Your specialist identifies specific trigger points and areas of fascial restriction that may be limiting your range of motion or causing referred pain."
+        },
+        {
+          "heading": "Bespoke Recovery Roadmap",
+          "content": "Based on our findings, we curate a personalized schedule of modalities — from deep tissue to lymphatic work — designed to deliver maximum biological ROI."
+        }
+      ],
+      "ctas": ["Book Your Introductory Assessment", "Schedule Your Precision Consultation"],
+      "faq": [
+        {
+          "q": "How long does the initial consult take?",
+          "a": "The initial diagnostic session typically lasts 30 to 45 minutes, often combined with your first introductory treatment."
+        },
+        {
+          "q": "Will I receive a treatment during my first visit?",
+          "a": "Yes. Following the assessment, we immediately apply our findings to an introductory session."
+        }
+      ]
+    },
+    "consult-home": {
+      "title": "Kick Off With a Consult at Home",
+      "titleEs": "Consulta de Masaje en Casa",
+      "metaTitle": "In-Home Massage Consultation | A1 Training Group",
+      "metaDescription": "Clinical massage therapy intake in the comfort of your home. Professional at-home assessments and bespoke recovery planning.",
+      "headline": "Clinical Precision in Your Private Domain",
+      "headlineEs": "Precisión Clínica en Tu Dominio Privado",
+      "intro": "We bring the entire diagnostic infrastructure of our facility directly to your residence. This in-home consultation ensures your journey into professional massage therapy begins with zero friction, zero travel, and total privacy.",
+      "introEs": "Traemos toda la infraestructura de diagnóstico directamente a tu residencia.",
+      "sections": [
+        {
+          "heading": "Environmental Integration",
+          "content": "We evaluate your home's layout to determine the optimal setup for recovery, considering lighting, acoustics, and spatial ergonomics."
+        },
+        {
+          "heading": "Functional Movement Screening",
+          "content": "We observe your movement within your natural environment, identifying how your daily habits affect your biomechanics."
+        },
+        {
+          "heading": "Concierge Recovery Roadmap",
+          "content": "We develop a strategic, multi-session plan that aligns with your specific goals, whether that's sports recovery or deep executive decompression."
+        }
+      ],
+      "ctas": ["Schedule Your At-Home Assessment", "Book Your Private Diagnostic"],
+      "faq": [
+        {
+          "q": "How much space is needed?",
+          "a": "We only require enough space to set up a professional massage table and for you to move comfortably during the screening."
+        },
+        {
+          "q": "Will the same therapist perform future sessions?",
+          "a": "Whenever possible, yes. We aim for continuity of care."
+        }
+      ]
+    }
+  },
+  "kettlebell": {
+    "course": {
+      "title": "Kettlebell Course",
+      "titleEs": "Curso de Kettlebell",
+      "metaTitle": "Kettlebell Training Course | A1 Training Group",
+      "metaDescription": "Master the art of kettlebell training. Our structured course takes you from beginner to confident practitioner with proper Hardstyle technique.",
+      "headline": "Master the Art of Power",
+      "headlineEs": "Domina el Arte del Poder",
+      "intro": "The kettlebell is often misunderstood as just another weight. In reality, it is a sophisticated tool for metabolic conditioning, postural correction, and explosive power. Our course is structured into distinct phases to ensure safety, technical proficiency, and measurable transformation.",
+      "introEs": "La kettlebell a menudo se malinterprepa como otro peso más. En realidad, es una herramienta sofisticada para el acondicionamiento metabólico.",
+      "sections": [
+        {
+          "heading": "Phase 1: The Foundation",
+          "content": "Before we add weight, we ensure movement quality. We focus on the Kettlebell Deadlift, the Goblet Squat, and the Hardstyle Plank — teaching the tension required for heavy lifting."
+        },
+        {
+          "heading": "Phase 2: Ballistic Excellence",
+          "content": "Once your foundation is set, we move into dynamic movements: the Kettlebell Swing for fat loss and glute strength, the Clean for graceful transitions, and the Snatch for unparalleled conditioning."
+        },
+        {
+          "heading": "Phase 3: The Turkish Get-Up",
+          "content": "A slow, deliberate movement that takes you from lying on the floor to standing while holding a weight overhead. The ultimate test of shoulder stability, core strength, and total-body coordination."
+        }
+      ],
+      "ctas": ["Start the Kettlebell Course", "Book Your Assessment"],
+      "faq": [
+        {
+          "q": "Is kettlebell training safe for beginners?",
+          "a": "Absolutely. We start every client with fundamentals, focusing on the hip hinge before ever moving a weight."
+        },
+        {
+          "q": "Can I do this in a small space?",
+          "a": "Yes. You only need a space roughly the size of a yoga mat to perform a complete workout."
+        }
+      ]
+    },
+    "consult": {
+      "title": "Kick Off With a Consult",
+      "titleEs": "Comienza con una Consulta de Kettlebell",
+      "metaTitle": "Kettlebell Consultation | A1 Training Group",
+      "metaDescription": "Book a private kettlebell consultation. Movement screen, postural assessment, and bespoke goal setting.",
+      "headline": "Your Blueprint for Power",
+      "headlineEs": "Tu Plan para el Poder",
+      "intro": "This is a comprehensive, 60-minute diagnostic session. We don't believe in trying out a workout; we believe in architecting a transformation. This is where we bridge the gap between where you are and the state you desire.",
+      "introEs": "Esta es una sesión de diagnóstico integral de 60 minutos. No creemos en probar un entrenamiento; creemos en arquitectar una transformación.",
+      "sections": [
+        {
+          "heading": "The Movement Screen",
+          "content": "Before we touch a kettlebell, we analyze how you move. We look for the energy leaks that lead to injury and plateau. Postural assessment, mobility vs. stability testing, and injury history review."
+        },
+        {
+          "heading": "The Hardstyle Introduction",
+          "content": "For those new to the tool, we introduce the Hardstyle kettlebell swing. You will learn the Hinge, the Root, and the Plank — the three pillars that make kettlebell training the most efficient full-body conditioning tool."
+        },
+        {
+          "heading": "Goal Architecture",
+          "content": "We sit down to define your North Star. Is it body transformation? Senior fitness? Post-natal core rebuilding? Strength training for busy professionals who need maximum ROI in 45 minutes?"
+        }
+      ],
+      "ctas": ["Book Your Kettlebell Consultation", "Schedule Your Assessment"],
+      "faq": [
+        {
+          "q": "Why is a consultation mandatory?",
+          "a": "It serves as the critical alignment between your personal health trajectory and our performance standards. We calibrate the intensity of your training to your specific physiological needs."
+        },
+        {
+          "q": "What do I receive after the consult?",
+          "a": "A 12-week progression plan, nutritional integration options, and recovery strategy recommendations."
+        }
+      ]
+    }
+  },
+  "physical-therapy": {
+    "studio": {
+      "title": "Let's Train at the Studio",
+      "titleEs": "Terapia Física en el Estudio",
+      "metaTitle": "Studio Physical Therapy | A1 Training Group",
+      "metaDescription": "Expert physical therapy in our private Manhattan studios. Injury rehabilitation, corrective exercise, and movement assessment in a clinical environment.",
+      "headline": "Rehabilitation Meets Performance",
+      "headlineEs": "Rehabilitación Conoce al Rendimiento",
+      "intro": "Our studio serves as a physical therapy hub where clinical expertise meets high-performance training. Our corrective exercise specialists use the studio's open floor plan and specialized tools to perform gait analysis and biomechanical assessments.",
+      "introEs": "Nuestro estudio sirve como un centro de terapia física donde la experiencia clínica se encuentra con el entrenamiento de alto rendimiento.",
+      "sections": [
+        {
+          "heading": "Clinical-Grade Assessment",
+          "content": "Our studios are equipped with specialized diagnostic tools essential for a comprehensive physical therapy assessment, from advanced body composition analyzers to gait analysis technology."
+        },
+        {
+          "heading": "Seamless Rehab-to-Performance Transition",
+          "content": "We bridge the gap between clinical rehabilitation and elite performance. Your recovery doesn't stop at pain relief — we build you back stronger."
+        }
+      ],
+      "ctas": ["Book Your PT Studio Session", "Schedule a Biomechanical Assessment"],
+      "faq": [
+        {
+          "q": "Do I need a referral?",
+          "a": "A formal referral is not required, though we value a collaborative approach with your physician."
+        }
+      ]
+    },
+    "in-home": {
+      "title": "Bring the Therapy to Me",
+      "titleEs": "Trae la Terapia a Mí",
+      "metaTitle": "In-Home Physical Therapy | A1 Training Group",
+      "metaDescription": "Expert physical therapy delivered to your home. Injury rehabilitation and corrective exercise in the comfort of your own space.",
+      "headline": "Recovery Without Friction",
+      "headlineEs": "Recuperación Sin Fricción",
+      "intro": "Why travel to a clinic for rehab? Our licensed experts provide physical therapy in your home. We combine rehabilitation with fitness training to help you recover from injury while maintaining your strength goals.",
+      "introEs": "¿Por qué viajar a una clínica? Nuestros expertos licenciados brindan terapia física en tu hogar.",
+      "sections": [
+        {
+          "heading": "Home Environment Assessment",
+          "content": "We evaluate how your daily environment — your desk setup, furniture, stairs — affects your recovery. This contextual insight allows us to provide corrective adjustments in real-time."
+        },
+        {
+          "heading": "Integrated Recovery",
+          "content": "We assess your home's amenities to integrate recovery protocols, from staging a dedicated area for manual therapy to teaching you how to utilize percussion therapy between sessions."
+        }
+      ],
+      "ctas": ["Schedule Your At-Home PT Evaluation", "Book Your In-Home Session"],
+      "faq": [
+        {
+          "q": "Can you work with my existing medical team?",
+          "a": "Absolutely. We coordinate with your physician, surgeon, or existing physical therapist to ensure continuity of care."
+        }
+      ]
+    },
+    "consult-studio": {
+      "title": "Consult at The Studio",
+      "titleEs": "Consulta de Terapia Física en el Estudio",
+      "metaTitle": "Physical Therapy Studio Consultation | A1 Training Group",
+      "metaDescription": "Comprehensive physical therapy assessment in our private studio. Movement screening, injury evaluation, and rehabilitation planning.",
+      "headline": "The Diagnostic Foundation",
+      "headlineEs": "El Fundamento del Diagnóstico",
+      "intro": "Our physical therapy consultation is a comprehensive diagnostic event. We assess your movement, identify the root cause of pain or limitation, and create a rehabilitation roadmap that bridges the gap between clinical recovery and performance.",
+      "introEs": "Nuestra consulta de terapia física es un evento de diagnóstico integral.",
+      "sections": [
+        {
+          "heading": "Injury & Medical History Review",
+          "content": "We conduct a thorough review of your medical history, previous imaging, and injury patterns to understand the full context of your condition."
+        },
+        {
+          "heading": "Movement Assessment",
+          "content": "We perform a granular analysis of your kinetic chain, evaluating how your nervous system coordinates movement under various loads and positions."
+        },
+        {
+          "heading": "Rehabilitation Roadmap",
+          "content": "Based on our findings, we create a phased rehabilitation plan that transitions you from pain management to full performance."
+        }
+      ],
+      "ctas": ["Book Your PT Consultation", "Schedule Your Movement Assessment"],
+      "faq": []
+    },
+    "consult-home": {
+      "title": "Consult at Home",
+      "titleEs": "Consulta de Terapia Física en Casa",
+      "metaTitle": "In-Home Physical Therapy Consultation | A1 Training Group",
+      "metaDescription": "Physical therapy assessment in your home. Comprehensive evaluation and rehabilitation planning in your own environment.",
+      "headline": "Clinical Care at Your Doorstep",
+      "headlineEs": "Atención Clínica en Tu Puerta",
+      "intro": "Your home consultation allows us to assess your movement in the space where you spend the most time. We identify environmental triggers and create a rehabilitation plan that works within your actual daily life.",
+      "introEs": "Tu consulta en casa nos permite evaluar tu movimiento en el espacio donde pasas más tiempo.",
+      "sections": [
+        {
+          "heading": "Ergonomic Evaluation",
+          "content": "We assess your home office, living space, and daily movement patterns to identify the root environmental causes of your pain or limitation."
+        },
+        {
+          "heading": "Home Exercise Program",
+          "content": "We design a home exercise program tailored to the specific equipment and space you have available, ensuring compliance and progress between sessions."
+        }
+      ],
+      "ctas": ["Schedule Your At-Home PT Consult", "Book Your Home Assessment"],
+      "faq": []
+    }
+  },
+  "boxing": {
+    "studio": {
+      "title": "Let's Train at the Studio",
+      "titleEs": "Entrenamiento de Boxeo en el Estudio",
+      "metaTitle": "Boxing Training Studio | A1 Training Group",
+      "metaDescription": "Private boxing training in our Manhattan studios. Learn proper technique, build cardio, and develop the mental toughness of a fighter.",
+      "headline": "Train Like a Fighter",
+      "headlineEs": "Entrena Como un Luchador",
+      "intro": "Our private boxing sessions combine technical instruction with high-intensity conditioning. Learn proper stance, footwork, combinations, and defensive moves from experienced coaches in a focused studio environment.",
+      "introEs": "Nuestras sesiones privadas de boxeo combinan instrucción técnica con acondicionamiento de alta intensidad.",
+      "sections": [
+        {
+          "heading": "Technical Boxing Instruction",
+          "content": "Master the fundamentals: stance, jab, cross, hook, uppercut, and defensive maneuvers. Our coaches break down every movement with precision."
+        },
+        {
+          "heading": "High-Intensity Conditioning",
+          "content": "Boxing is one of the most effective full-body workouts. Our sessions torch calories, build explosive power, and develop cardiovascular endurance."
+        }
+      ],
+      "ctas": ["Book Your Boxing Session", "Schedule a Technique Assessment"],
+      "faq": []
+    },
+    "in-home": {
+      "title": "Bring the Workout to Me",
+      "titleEs": "Entrenamiento de Boxeo en Casa",
+      "metaTitle": "In-Home Boxing Training | A1 Training Group",
+      "metaDescription": "Private boxing training at your home. High-intensity cardio and technical instruction brought directly to you.",
+      "headline": "The Ring Comes to You",
+      "headlineEs": "El Ring Viene a Ti",
+      "intro": "Our mobile boxing coaches arrive with portable equipment — gloves, pads, and heavy bags — to transform your space into a high-energy training zone. Get the full boxing experience without leaving home.",
+      "introEs": "Nuestros entrenadores de boxeo móviles llegan con equipo portátil para transformar tu espacio.",
+      "sections": [
+        {
+          "heading": "Full Equipment Delivery",
+          "content": "We bring everything: gloves, focus mitts, heavy bag stand, and timer. All you need is a clear space and the will to train."
+        },
+        {
+          "heading": "Stress Relief on Demand",
+          "content": "There's nothing quite like hitting a bag to release the stress of a long day. Our in-home boxing sessions are the ultimate stress management tool."
+        }
+      ],
+      "ctas": ["Book Your In-Home Boxing Session", "Schedule Now"],
+      "faq": []
+    },
+    "consult-studio": {
+      "title": "Consult at The Studio",
+      "titleEs": "Consulta de Boxeo en el Estudio",
+      "metaTitle": "Boxing Consultation | A1 Training Group",
+      "metaDescription": "Start your boxing journey with a studio consultation. Assessment, technique evaluation, and personalized training plan.",
+      "headline": "Assess Your Fight Readiness",
+      "headlineEs": "Evalúa Tu Preparación",
+      "intro": "Your boxing consultation includes a fitness assessment, technique evaluation, and a discussion of your goals — whether that's fitness, competition, or self-defense. We create a personalized boxing program tailored to your level.",
+      "introEs": "Tu consulta de boxeo incluye una evaluación física, evaluación de técnica y una discusión de tus objetivos.",
+      "sections": [
+        {
+          "heading": "Fitness Baseline",
+          "content": "We assess your current cardiovascular fitness, coordination, and reaction time to establish a starting point for your boxing journey."
+        },
+        {
+          "heading": "Technique Evaluation",
+          "content": "Even if you've never thrown a punch, we evaluate your natural movement patterns to design a program that builds on your strengths."
+        }
+      ],
+      "ctas": ["Book Your Boxing Consultation", "Start Your Assessment"],
+      "faq": []
+    },
+    "consult-home": {
+      "title": "Consult at Home",
+      "titleEs": "Consulta de Boxeo en Casa",
+      "metaTitle": "In-Home Boxing Consultation | A1 Training Group",
+      "metaDescription": "Boxing assessment in your home. We evaluate your space, fitness level, and goals to design your personalized boxing program.",
+      "headline": "Your Home, Your Ring",
+      "headlineEs": "Tu Hogar, Tu Ring",
+      "intro": "We come to your home to assess your space, evaluate your fitness, and discuss your boxing goals. We'll show you how to turn your living room or garage into an effective training zone.",
+      "introEs": "Vamos a tu casa para evaluar tu espacio, tu condición física y discutir tus objetivos de boxeo.",
+      "sections": [
+        {
+          "heading": "Space Assessment",
+          "content": "We evaluate your available space and recommend the optimal setup for in-home boxing training."
+        },
+        {
+          "heading": "Goal Setting",
+          "content": "Whether you want to get fit, learn self-defense, or train competitively, we create a roadmap tailored to your objectives."
+        }
+      ],
+      "ctas": ["Book Your At-Home Boxing Consult", "Schedule Now"],
+      "faq": []
+    }
+  }
+}
