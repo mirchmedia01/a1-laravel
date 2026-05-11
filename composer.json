@@ -100,7 +100,7 @@
         },
         "platform": {
             "php": "8.4",
-            "ext-mongodb": "1.21"
+            "ext-mongodb": "2.3"
         }
     },
     "minimum-stability": "stable",
