@@ -95,8 +95,12 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": false,
+            "pestphp/pest-plugin": true
+        },
+        "platform": {
+            "php": "8.4",
+            "ext-mongodb": "1.21"
         }
     },
     "minimum-stability": "stable",
