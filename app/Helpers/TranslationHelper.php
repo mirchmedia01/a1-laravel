@@ -46,6 +46,7 @@ if (! function_exists('tc')) {
     {
         $translations = load_translations($locale);
         $value = $translations[$key] ?? [];
+
         return is_array($value) ? $value : [];
     }
 }

@@ -2,15 +2,15 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use MongoDB\Laravel\MongoDBServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
         if (env('MONGODB_URI') && extension_loaded('mongodb')) {
-            $this->app->register(\MongoDB\Laravel\MongoDBServiceProvider::class);
+            $this->app->register(MongoDBServiceProvider::class);
         }
     }
 

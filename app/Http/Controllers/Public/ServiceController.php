@@ -73,12 +73,12 @@ class ServiceController extends Controller
             'ogTitle' => $title,
             'ogDescription' => $description,
             'ogType' => 'website',
-            'ogImage' => \App\Services\SEOService::buildUrl('/images/logo.avif'),
+            'ogImage' => SEOService::buildUrl('/images/logo.avif'),
             'twitterCard' => 'summary_large_image',
             'twitterTitle' => $title,
             'twitterDescription' => $description,
-            'hreflang' => \App\Services\SEOService::getHreflang("services/{$slug}/{$sub}"),
-            'jsonld' => \App\Services\SEOService::getJsonLd($pageSlug, $title, $description, $canonical, \App\Services\SEOService::buildUrl('/images/logo.avif'), $lang),
+            'hreflang' => SEOService::getHreflang("services/{$slug}/{$sub}"),
+            'jsonld' => SEOService::getJsonLd($pageSlug, $title, $description, $canonical, SEOService::buildUrl('/images/logo.avif'), $lang),
         ];
 
         return view('public.services.sub-page', compact('meta', 'page', 'slug', 'sub', 'slugPricing', 'lang'));

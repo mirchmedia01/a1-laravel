@@ -105,7 +105,7 @@ Route::get('/health', function () {
     try {
         view('welcome')->render();
         $checks['view_rendered'] = true;
-    } catch (\Throwable $e) {
+    } catch (Throwable $e) {
         $checks['view_error'] = $e->getMessage();
     }
 

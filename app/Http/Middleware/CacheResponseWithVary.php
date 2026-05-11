@@ -12,12 +12,14 @@ class CacheResponseWithVary extends CacheAllSuccessfulGetRequests
     {
         $key = parent::makeCacheKey($request);
         $locale = app()->getLocale();
+
         return "{$key}:{$locale}";
     }
 
     public function renderResponse(Request $request, Response $response): Response
     {
         $response->headers->set('Vary', 'Accept-Language, Cookie');
+
         return parent::renderResponse($request, $response);
     }
 }

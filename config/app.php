@@ -26,7 +26,6 @@ use Illuminate\View\ViewServiceProvider;
 use Laravel\Socialite\SocialiteServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Livewire\Volt\VoltServiceProvider;
-
 use Resend\Laravel\ResendServiceProvider;
 use Spatie\ResponseCache\ResponseCacheServiceProvider;
 use Spatie\Sitemap\SitemapServiceProvider;

@@ -58,6 +58,7 @@ class SEOService
                 $record = PageSEO::where('slug', $slug)->first();
                 if ($record) {
                     $memory[$slug] = $record->toArray();
+
                     return $memory[$slug];
                 }
             } catch (\Throwable $e) {
@@ -68,10 +69,12 @@ class SEOService
         $pages = load_content('pages_seo.json');
         if (! empty($pages) && isset($pages[$slug])) {
             $memory[$slug] = $pages[$slug];
+
             return $memory[$slug];
         }
 
         $memory[$slug] = null;
+
         return null;
     }
 
