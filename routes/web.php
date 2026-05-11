@@ -81,6 +81,28 @@ Route::redirect('/service-page/{pack}-pack-online-video-session', '/services/onl
 Route::redirect('/service-page/{pack}-pack-a1-s-partner-training', '/services/partner-training', 301);
 Route::redirect('/service-page/a1-s-gym-s-complementary-session', '/services/consultations', 301);
 
+// ─── Health check (no middleware) ───
+Route::get('/health', function () {
+    $checks = [
+        'app_key' => env('APP_KEY') ? 'set' : 'MISSING',
+        'env' => app()->environment(),
+        'storage_writable' => is_writable(storage_path()),
+        'views_writable' => is_writable(storage_path('framework/views')),
+        'db_default' => config('database.default'),
+        'php_version' => PHP_VERSION,
+        'ext_mongodb' => extension_loaded('mongodb') ? 'loaded' : 'missing',
+    ];
+
+    try {
+        view('welcome')->render();
+        $checks['view_rendered'] = true;
+    } catch (\Throwable $e) {
+        $checks['view_error'] = $e->getMessage();
+    }
+
+    return response()->json($checks);
+});
+
 Route::middleware(['locale'])->group(function () {
 
     // English routes (with response cache for static pages)
