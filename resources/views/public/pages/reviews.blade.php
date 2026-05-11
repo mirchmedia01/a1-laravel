@@ -1,56 +1,75 @@
-@php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; $testimonials = [
-    ['name' => 'Sarah M.', 'role' => 'Client', 'text' => 'The trainers at A1 are incredible. They came to my apartment gym and completely transformed my strength in just 3 months.', 'textEs' => 'Los entrenadores de A1 son increíbles. Transformaron mi fuerza en solo 3 meses.'],
-    ['name' => 'David R.', 'role' => 'Client', 'text' => 'After my knee surgery, Dr. Hai Lin got me back to running in half the expected time.', 'textEs' => 'Después de mi cirugía de rodilla, el Dr. Hai Lin me puso a correr en la mitad del tiempo esperado.'],
-    ['name' => 'Jennifer L.', 'role' => 'Client', 'text' => 'I love that I can train at home with world-class equipment. No commuting, no crowds.', 'textEs' => 'Me encanta poder entrenar en casa con equipos de clase mundial. Sin desplazamientos, sin multitudes.'],
-    ['name' => 'Marcus T.', 'role' => 'Client', 'text' => 'The boxing training has been incredible for my cardio and confidence. Coach Phillip pushes me to my limits.', 'textEs' => 'El entrenamiento de boxeo ha sido increíble para mi cardio y confianza.'],
-    ['name' => 'Emily C.', 'role' => 'Client', 'text' => 'The kettlebell course completely changed how I think about strength training. Highly recommended!', 'textEs' => 'El curso de kettlebell cambió mi forma de pensar sobre el entrenamiento de fuerza.'],
-    ['name' => 'Robert K.', 'role' => 'Client', 'text' => 'A1 Training brought professionalism and results. The convenience of in-home training is unmatched.', 'textEs' => 'A1 Training trajo profesionalismo y resultados. La conveniencia del entrenamiento a domicilio es inigualable.'],
-]; @endphp
+@php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
 <x-layouts.public :meta="$meta ?? []">
-    <section class="py-24 md:py-32 px-4 relative overflow-hidden pt-36">
-        <div class="max-w-5xl mx-auto relative z-10 text-center">
-            <div class="flex items-center justify-center gap-2 text-accent mb-6">
-                @for($i=0; $i<5; $i++)<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor
+    <div class="min-h-screen bg-white pb-20">
+        <div class="bg-asphaltBlack text-white py-20 px-4 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <a href="https://g.page/r/CQ8a1srEed1WEBM/review" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 mb-6 bg-white/10 px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all group">
+                    <div class="flex items-center">@for($s=0; $s<5; $s++)<svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor</div>
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest group-hover:underline">{{ $isEs ? '5.0 Reseñas en Google' : '5.0 Google Reviews' }}</span>
+                </a>
+                <h1 class="text-4xl md:text-6xl font-heading font-black uppercase mb-4">{{ $isEs ? 'Lo Que Dicen Nuestros Clientes' : 'What Our Clients Say' }}</h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">{{ $isEs ? 'Resultados reales de personas reales.' : 'Real results from real people.' }}</p>
             </div>
-            <p class="text-white/40 text-sm font-bold uppercase tracking-widest mb-4">5.0 Google Rating</p>
-            <h1 class="text-white font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter uppercase leading-[1.1]">{{ $isEs ? 'Lo Que Dicen' : 'What Our' }}<br><span class="text-accent italic">{{ $isEs ? 'Nuestros Clientes' : 'Clients Say' }}</span></h1>
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-accent"></div>
         </div>
-    </section>
 
-    <section class="px-4 md:px-6 pb-24">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach($testimonials as $review)
-            <div class="bg-white/5 border border-white/10 rounded-[30px] p-8">
-                <div class="flex text-accent mb-4">@for($i=0; $i<5; $i++)<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor</div>
-                <p class="text-white/60 text-sm leading-relaxed mb-6 italic">"{{ $isEs ? $review['textEs'] : $review['text'] }}"</p>
-                <p class="text-white font-bold text-sm">{{ $review['name'] }}</p>
-                <p class="text-white/30 text-xs">{{ $review['role'] }}</p>
+        @php $allTestimonials = [
+            ['name' => 'Sarah M.', 'role' => 'Personal Training Client', 'text' => 'A1 Training completely changed my approach to fitness. Coach Wei made me feel comfortable from day one, and I\'ve lost 30 lbs in 6 months. The in-home sessions fit perfectly into my busy schedule.'],
+            ['name' => 'David R.', 'role' => 'Physical Therapy Client', 'text' => 'Dr. Hai Lin is incredible. After my knee surgery, I thought I\'d never run again. His rehab program got me back on my feet — literally. I\'m now running 5Ks pain-free.'],
+            ['name' => 'Jennifer L.', 'role' => 'Partner Training Client', 'text' => 'My husband and I do partner training with Coach Kate. It\'s become our favorite activity together. She keeps us both challenged while making sure we\'re having fun.'],
+            ['name' => 'Marcus T.', 'role' => 'Boxing Client', 'text' => 'Coach Phillip brings an energy I\'ve never experienced in a gym. The boxing sessions are intense, technical, and incredibly rewarding. Best stress relief in NYC.'],
+            ['name' => 'Emily C.', 'role' => 'Post-Natal Client', 'text' => 'Coach Abby helped me rebuild my core after pregnancy. Her knowledge of post-natal fitness is outstanding. I feel stronger now than before I had my baby.'],
+            ['name' => 'Robert K.', 'role' => 'Executive Training Client', 'text' => 'As a busy exec, I needed something that fit my schedule. The mobile training is a game-changer. Coach Jamie designs programs that maximize results in minimum time.'],
+        ]; @endphp
+
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @foreach($allTestimonials as $t)
+                <div class="bg-lightGray rounded-[2rem] p-8 border-2 border-transparent hover:border-accent/30 transition-all flex flex-col">
+                    <div class="flex items-center gap-1 mb-4">@for($s=0; $s<5; $s++)<svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor</div>
+                    <svg class="w-8 h-8 text-accent/30 mb-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C9.591 11.69 11 13.166 11 15c0 1.933-1.567 3.5-3.5 3.5-1.271 0-2.404-.648-2.917-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311C19.591 11.69 21 13.166 21 15c0 1.933-1.567 3.5-3.5 3.5-1.271 0-2.404-.648-2.917-1.179z"/></svg>
+                    <p class="text-asphaltBlack font-medium leading-relaxed flex-grow italic">&ldquo;{{ $t['text'] }}&rdquo;</p>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <p class="font-heading font-black text-asphaltBlack uppercase">{{ $t['name'] }}</p>
+                        <p class="text-gray-400 text-sm font-medium uppercase">{{ $t['role'] }}</p>
+                    </div>
+                </div>
+                @endforeach
             </div>
-            @endforeach
-        </div>
-    </section>
 
-    @php $faqs = [
-        ['q' => 'How do I leave a review?', 'qEs' => '¿Cómo dejo una reseña?', 'a' => 'You can leave a review on our Google Business profile. Simply search for A1 Training Group on Google and click "Write a review."', 'aEs' => 'Puedes dejar una reseña en nuestro perfil de Google Business. Simplemente busca A1 Training Group en Google y haz clic en "Escribir una reseña."'],
-        ['q' => 'Do you have before/after photos?', 'qEs' => '¿Tienen fotos de antes/después?', 'a' => 'Yes, with client permission. Contact us to see transformation stories from clients who have achieved remarkable results.', 'aEs' => 'Sí, con permiso del cliente. Contáctanos para ver historias de transformación de clientes que han logrado resultados notables.'],
-        ['q' => 'How is A1 rated compared to other NYC trainers?', 'qEs' => '¿Cómo está calificado A1 en comparación con otros entrenadores de NYC?', 'a' => 'A1 Training Group maintains a 5.0 Google rating, making us one of the highest-rated personal training services in New York City.', 'aEs' => 'A1 Training Group mantiene una calificación de 5.0 en Google, lo que nos convierte en uno de los servicios de entrenamiento personal mejor calificados de Nueva York.'],
-    ]; @endphp
-    <section class="px-4 pb-24">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ $isEs ? 'Preguntas Frecuentes' : 'FAQs' }}</h2>
-            <div class="space-y-4">
-                @foreach($faqs as $i => $faq)
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex justify-between items-center w-full text-left">
-                        <span class="text-white font-bold text-sm pr-4">{{ $isEs ? $faq['qEs'] : $faq['q'] }}</span>
-                        <svg class="w-4 h-4 text-accent shrink-0" :class="open ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            <div class="mt-16 bg-asphaltBlack rounded-[3rem] p-12 text-white text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-heading font-black uppercase mb-4">{{ $isEs ? '¿Listo para Ser el Próximo?' : 'Ready to Be Next?' }}</h2>
+                    <a href="{{ $p }}/services/consultations" class="inline-flex items-center gap-3 bg-accent text-asphaltBlack px-8 py-4 rounded-xl font-heading font-black text-xl uppercase hover:bg-yellow-400 transition-all shadow-[0_0_30px_rgba(253,208,82,0.3)] border-b-4 border-asphaltBlack/20">
+                        {{ $isEs ? 'Consulta Gratis' : 'Book Free Consult' }}
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        @php $reviewsFaqs = [
+            ['q' => 'How do I leave a review?', 'qEs' => '¿Cómo puedo dejar una reseña?', 'a' => 'You can leave a review on our Google page or Yelp. We appreciate all feedback!', 'aEs' => 'Puedes dejar una reseña en nuestra página de Google o Yelp. ¡Apreciamos todo tipo de comentarios!'],
+            ['q' => 'Can I talk to past clients?', 'qEs' => '¿Puedo hablar con clientes anteriores?', 'a' => 'We can connect you with a current client who can share their experience. Ask during your free consultation.', 'aEs' => 'Podemos conectarte con un cliente actual que pueda compartir su experiencia. Pregunta durante tu consulta gratuita.'],
+            ['q' => 'Do you have more testimonials?', 'qEs' => '¿Tienen más testimonios?', 'a' => 'Yes! Visit our Google Reviews page for hundreds more reviews from real clients.', 'aEs' => '¡Sí! Visita nuestra página de Google Reviews para cientos más de reseñas de clientes reales.'],
+        ]; @endphp
+        <div class="max-w-3xl mx-auto px-4 pb-16">
+            <h2 class="text-3xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}</h2>
+            <div class="space-y-4" x-data="{ openFaq: null }">
+                @foreach($reviewsFaqs as $i => $faq)
+                <div class="bg-lightGray border border-gray-200 rounded-2xl overflow-hidden" x-data="{ open: false }">
+                    <button @click="open = !open" class="w-full flex items-center justify-between p-6 text-left">
+                        <span class="text-asphaltBlack font-bold text-lg pr-4">{{ $isEs ? $faq['qEs'] : $faq['q'] }}</span>
+                        <svg class="w-5 h-5 text-accent shrink-0" :class="open ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </button>
-                    <div x-show="open" x-cloak class="mt-4 text-white/40 text-sm leading-relaxed">{{ $isEs ? $faq['aEs'] : $faq['a'] }}</div>
+                    <div x-show="open" x-cloak class="px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">{{ $isEs ? $faq['aEs'] : $faq['a'] }}</p>
+                    </div>
                 </div>
                 @endforeach
             </div>
         </div>
-    </section>
-
-    <x-sections.cta />
+    </div>
 </x-layouts.public>

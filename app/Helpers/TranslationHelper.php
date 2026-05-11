@@ -26,18 +26,8 @@ if (! function_exists('t')) {
     function t(string $key, array $replace = [], ?string $locale = null): string
     {
         $translations = load_translations($locale);
-        $keys = explode('.', $key);
-        $value = null;
-        $cursor = $translations;
 
-        foreach ($keys as $k) {
-            if (! is_array($cursor) || ! array_key_exists($k, $cursor)) {
-                return $key;
-            }
-            $cursor = $cursor[$k];
-        }
-
-        $value = $cursor;
+        $value = $translations[$key] ?? $key;
 
         if (! is_string($value)) {
             return $key;
@@ -55,16 +45,7 @@ if (! function_exists('tc')) {
     function tc(string $key, ?string $locale = null): array
     {
         $translations = load_translations($locale);
-        $keys = explode('.', $key);
-        $cursor = $translations;
-
-        foreach ($keys as $k) {
-            if (! is_array($cursor) || ! array_key_exists($k, $cursor)) {
-                return [];
-            }
-            $cursor = $cursor[$k];
-        }
-
-        return is_array($cursor) ? $cursor : [];
+        $value = $translations[$key] ?? [];
+        return is_array($value) ? $value : [];
     }
 }

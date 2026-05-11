@@ -42,7 +42,7 @@ class FaqMicrodataTest extends TestCase
         $response = $this->get('/about');
         $response->assertOk();
         $html = $response->getContent();
-        $this->assertStringContainsString('FAQs', $html);
+        $this->assertStringContainsString('Frequently Asked Questions', $html);
         $this->assertStringContainsString('x-data="{ open: false }"', $html);
     }
 
@@ -51,7 +51,7 @@ class FaqMicrodataTest extends TestCase
         $response = $this->get('/reviews');
         $response->assertOk();
         $html = $response->getContent();
-        $this->assertStringContainsString('FAQs', $html);
+        $this->assertStringContainsString('Frequently Asked Questions', $html);
     }
 
     public function test_find_class_page_has_visible_faq(): void
@@ -99,6 +99,6 @@ class FaqMicrodataTest extends TestCase
         $response = $this->get('/contact');
         $response->assertOk();
         $html = $response->getContent();
-        $this->assertStringContainsString('FAQs', $html);
+        $this->assertStringContainsString('Common Questions', $html);
     }
 }

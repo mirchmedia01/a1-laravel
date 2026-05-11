@@ -28,6 +28,30 @@
         </div>
     </div>
 
+    @php $serviceStats = [
+        'personal-training' => [['label' => 'Locations', 'value' => 'Gym + Home'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$105']],
+        'partner-training' => [['label' => 'Per Person', 'value' => 'From $70'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Locations', 'value' => 'Gym + Home']],
+        'physical-therapy' => [['label' => 'Credentials', 'value' => 'DPT Level'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$235']],
+        'massage-therapy' => [['label' => 'Modalities', 'value' => 'Sports + Deep'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$180']],
+        'kettlebell' => [['label' => 'Format', 'value' => 'Group Class'], ['label' => 'Session Length', 'value' => '45 min'], ['label' => 'Drop-in', 'value' => '$35']],
+        'boxing' => [['label' => 'Locations', 'value' => 'Gym + Home'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$120']],
+        'online-hybrid' => [['label' => 'Format', 'value' => 'Video + App'], ['label' => 'Flexibility', 'value' => '24/7'], ['label' => 'Starting At', 'value' => '$100']],
+        'registered-dietitians' => [['label' => 'Format', 'value' => 'Virtual'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$150']],
+        'consultations' => [['label' => 'Format', 'value' => 'Phone + In-Person'], ['label' => 'Duration', 'value' => '15-60 min'], ['label' => 'Cost', 'value' => 'FREE']],
+    ]; @endphp
+    @if(!empty($serviceStats[$service['slug']]))
+    <div class="bg-accent">
+        <div class="max-w-7xl mx-auto px-4 py-4 grid grid-cols-3 divide-x divide-black/20">
+            @foreach($serviceStats[$service['slug']] as $stat)
+            <div class="text-center px-4 py-2">
+                <div class="text-black font-heading text-xl md:text-2xl uppercase tracking-tighter">{{ $stat['value'] }}</div>
+                <div class="text-black/60 text-[10px] font-black uppercase tracking-widest">{{ $stat['label'] }}</div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    @endif
+
     <section class="max-w-7xl mx-auto px-4 py-20">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
             <div class="lg:col-span-3 space-y-12">
@@ -76,6 +100,21 @@
                     @endif
 
                     <a href="{{ $p }}/services/consultations" class="block w-full bg-accent text-black text-center py-4 rounded-xl font-heading font-black text-lg uppercase hover:bg-accent-light transition-all">{{ $isEs ? 'Reservar Ahora' : 'Book Now' }}</a>
+
+                    <div class="pt-2 border-t border-white/5 space-y-2">
+                        <div class="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest">
+                            <svg class="w-3.5 h-3.5 text-accent/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            {{ $isEs ? 'Sin contratos' : 'No contracts' }}
+                        </div>
+                        <div class="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest">
+                            <svg class="w-3.5 h-3.5 text-accent/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            {{ $isEs ? 'Consulta gratis de 15 min' : 'Free 15-min consultation' }}
+                        </div>
+                        <div class="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest">
+                            <svg class="w-3.5 h-3.5 text-accent/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            {{ $isEs ? 'Manhattan & Hamptons' : 'Manhattan & Hamptons' }}
+                        </div>
+                    </div>
                 </div>
             </div>
             @endif

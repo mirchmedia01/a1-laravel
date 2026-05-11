@@ -13,7 +13,8 @@ export default {
                     DEFAULT: '#c9a96e',
                     light: '#d4b87a',
                 },
-                asphaltBlack: '#1a1a1a',
+                asphaltBlack: '#111111',
+                lightGray: '#F3F4F6',
             },
             fontFamily: {
                 heading: ['Barlow Condensed', 'sans-serif'],
