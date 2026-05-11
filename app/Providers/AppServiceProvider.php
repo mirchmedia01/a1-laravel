@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,16 +22,22 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        if (env('APP_ENV') === 'production') {
+            URL::forceScheme('https');
+        }
+
         Request::setTrustedProxies(['*'], Request::HEADER_X_FORWARDED_ALL);
 
-        if (! env('MONGODB_URI')) {
+        if (! env('MONGODB_URI') || ! extension_loaded('mongodb')) {
             config(['database.default' => 'sqlite']);
         }
 
-        try {
-            DB::connection('mongodb')->getMongoClient()->listDatabases();
-        } catch (\Throwable $e) {
-            config(['database.default' => 'sqlite']);
+        if (extension_loaded('mongodb')) {
+            try {
+                DB::connection('mongodb')->getMongoClient()->listDatabases();
+            } catch (\Throwable $e) {
+                config(['database.default' => 'sqlite']);
+            }
         }
     }
 }
