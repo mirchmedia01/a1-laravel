@@ -229,14 +229,52 @@
   ],
   "massage-therapy": [
     {
-      "name": "1 Pack - Studio Massage Therapy",
+      "name": "Sports Massage - Studio",
       "price": 180,
-      "location": "gym"
+      "location": "gym",
+      "duration": "60min"
     },
     {
-      "name": "1 Pack - In-Home Massage Therapy",
+      "name": "Sports Massage - In-Home",
+      "price": 220,
+      "location": "home",
+      "duration": "60min"
+    },
+    {
+      "name": "Deep Tissue & Medical Massage - Studio",
       "price": 200,
-      "location": "home"
+      "location": "gym",
+      "duration": "60min"
+    },
+    {
+      "name": "Deep Tissue & Medical Massage - In-Home",
+      "price": 240,
+      "location": "home",
+      "duration": "60min"
+    },
+    {
+      "name": "Executive Decompression Therapy - Studio",
+      "price": 250,
+      "location": "gym",
+      "duration": "75min"
+    },
+    {
+      "name": "Executive Decompression Therapy - In-Home",
+      "price": 300,
+      "location": "home",
+      "duration": "75min"
+    },
+    {
+      "name": "Lymphatic Drainage - Studio",
+      "price": 200,
+      "location": "gym",
+      "duration": "60min"
+    },
+    {
+      "name": "Lymphatic Drainage - In-Home",
+      "price": 240,
+      "location": "home",
+      "duration": "60min"
     }
   ],
   "registered-dietitians": [

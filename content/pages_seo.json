@@ -96,5 +96,33 @@
     "title_es": "Renovaciones de Sesiones y Membresías | A1 Training Group",
     "description_es": "Renueva tu paquete de sesiones de A1 Training Group. Renovación automática mensual, paquetes de sesiones y actualizaciones de servicio disponibles.",
     "keywords": ["personal training renewal", "fitness membership NYC", "session pack renewal"]
+  },
+  "boxing": {
+    "title": "Private Boxing & Elite Personal Training NYC | A1 Training Group",
+    "description": "Experience NYC's #1 concierge fitness service. Bespoke boxing, kettlebell training, and physical therapy delivered to your luxury condo or private studio. From Tribeca to the Upper East Side, our elite coaches provide discrete, high-performance results for busy executives and professionals.",
+    "title_es": "Boxeo Privado y Entrenamiento Personal de Élite en NYC | A1 Training Group",
+    "description_es": "Experimenta el servicio de fitness concierge #1 de NYC. Boxeo a medida, entrenamiento con kettlebell y terapia física entregados en tu condominio de lujo o estudio privado.",
+    "keywords": ["private boxing NYC", "elite personal training Manhattan", "concierge fitness NYC", "boxing training Tribeca", "kettlebell training NYC", "in-home boxing Manhattan"]
+  },
+  "kettlebell": {
+    "title": "Elite Kettlebell Training NYC | Private In-Home Kettlebell Course",
+    "description": "Experience NYC's #1 private kettlebell course. Our elite mobile trainers bring Hardstyle (RKC/StrongFirst) coaching to your Manhattan home or luxury condo. Perfect for busy executives seeking strength, longevity, and postural correction.",
+    "title_es": "Entrenamiento de Kettlebell de Élite en NYC | Curso Privado de Kettlebell a Domicilio",
+    "description_es": "Experimenta el curso privado de kettlebell #1 de NYC. Nuestros entrenadores móviles de élite llevan coaching Hardstyle (RKC/StrongFirst) a tu hogar o condominio de lujo en Manhattan.",
+    "keywords": ["kettlebell training NYC", "Hardstyle kettlebell", "RKC certified instructor", "StrongFirst Manhattan", "private kettlebell coaching", "in-home kettlebell NYC"]
+  },
+  "massage-therapy": {
+    "title": "Best Massage Therapy New York | Elite Recovery & Sports Massage NYC",
+    "description": "Experience NYC's premier professional massage therapy services. From sports massage for athletes to executive decompression, A1 Training Group brings white-glove recovery to your luxury Manhattan home or our private studio.",
+    "title_es": "La Mejor Terapia de Masaje en Nueva York | Recuperación de Élite y Masaje Deportivo NYC",
+    "description_es": "Experimenta los servicios premier de terapia de masaje profesional en NYC. Desde masaje deportivo para atletas hasta descompresión ejecutiva. Servicio de recuperación de guante blanco.",
+    "keywords": ["massage therapy NYC", "sports massage New York", "deep tissue massage Manhattan", "executive massage NYC", "in-home massage Manhattan", "recovery massage NYC"]
+  },
+  "physical-therapy": {
+    "title": "Elite Physical Therapy & Recovery NYC | A1 Training Group Manhattan",
+    "description": "Experience NYC's premier concierge physical therapy and recovery. A1 Training Group provides bespoke rehabilitation, longevity coaching, and private strength training for busy executives in Tribeca, Chelsea, and the UES. White-glove service in-studio or at your luxury home.",
+    "title_es": "Terapia Física de Élite y Recuperación en NYC | A1 Training Group Manhattan",
+    "description_es": "Experimenta la terapia física concierge premier de NYC. A1 Training Group ofrece rehabilitación personalizada, coaching de longevidad y entrenamiento de fuerza privado para ejecutivos ocupados.",
+    "keywords": ["physical therapy NYC", "sports rehabilitation Manhattan", "longevity coaching NYC", "corrective exercise NYC", "post-surgical rehab NYC", "concierge physical therapy"]
   }
 }
