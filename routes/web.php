@@ -112,7 +112,7 @@ Route::get('/health', function () {
     return response()->json($checks);
 });
 
-Route::middleware(['locale'])->group(function () {
+Route::middleware(['locale', 'cacheResponse'])->group(function () {
 
     // English routes (with response cache for static pages)
     Route::get('/', [HomeController::class, 'index'])->name('home');

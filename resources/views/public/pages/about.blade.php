@@ -6,16 +6,16 @@
             <div class="max-w-7xl mx-auto px-4 relative z-10">
                 <a href="{{ $p ?: '/' }}" class="group inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-8 hover:-translate-x-1 transition-transform">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                    <span>{{ $isEs ? 'Volver al Inicio' : 'Back to Home' }}</span>
+                    <span>{{ t('back_to_home') }}</span>
                 </a>
                 <div class="max-w-4xl">
-                    <span class="bg-accent/10 text-accent border border-accent/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">{{ $isEs ? 'Sobre Nosotros' : 'About Us' }}</span>
+                    <span class="bg-accent/10 text-accent border border-accent/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">{{ t('about_us') }}</span>
                     <h1 class="text-5xl md:text-7xl font-heading font-black text-white uppercase leading-none tracking-tight mb-6">
-                        {{ $isEs ? 'Entrenamiento Élite.' : 'Elite Training.' }}<br>
-                        <span class="text-accent">{{ $isEs ? 'Traído a Ti.' : 'Brought to You.' }}</span>
+                        {{ t('elite_training') }}<br>
+                        <span class="text-accent">{{ t('brought_to_you') }}</span>
                     </h1>
                     <p class="text-xl text-gray-400 font-medium leading-relaxed max-w-2xl">
-                        {{ $isEs ? 'A1 Training Group es el proveedor #1 de entrenamiento personal a domicilio y móvil en NYC. Fuerza, movilidad, boxeo y recuperación directamente a ti.' : 'A1 Training Group is NYC\'s #1 in-home and mobile personal training provider. Strength, mobility, boxing, and recovery brought directly to you.' }}
+                        {{ t('a1_training_group_is_nycs_1_inhome_and_mobile_personal_train') }}
                     </p>
                 </div>
             </div>
@@ -25,9 +25,9 @@
         <section class="max-w-5xl mx-auto px-4 -mt-10 relative z-20">
             <div class="grid grid-cols-3 gap-4">
                 @php $stats = [
-                    ['value' => '6', 'label' => $isEs ? 'Entrenadores Expertos' : 'Expert Trainers'],
+                    ['value' => '6', 'label' => t('expert_trainers')],
                     ['value' => '5.0', 'label' => 'Google Rating'],
-                    ['value' => '7', 'label' => $isEs ? 'Servicios' : 'Services'],
+                    ['value' => '7', 'label' => t('services')],
                 ]; @endphp
                 @foreach($stats as $s)
                 <div class="bg-asphaltBlack rounded-2xl p-6 text-center">
@@ -40,7 +40,7 @@
 
         <section class="max-w-7xl mx-auto px-4 py-20">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-heading font-black uppercase text-asphaltBlack">{{ $isEs ? 'Lo Que Nos Diferencia' : 'What Sets Us Apart' }}</h2>
+                <h2 class="text-3xl md:text-5xl font-heading font-black uppercase text-asphaltBlack">{{ t('what_sets_us_apart') }}</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 @php $features = [
@@ -66,9 +66,9 @@
                 <div class="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
                 <div class="relative z-10">
                     <div class="flex items-center justify-center gap-1 mb-4">@for($s=0; $s<5; $s++)<svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor</div>
-                    <h2 class="text-3xl md:text-5xl font-heading font-black uppercase mb-4">{{ $isEs ? '¿Listo para Comenzar?' : 'Ready to Start?' }}</h2>
+                    <h2 class="text-3xl md:text-5xl font-heading font-black uppercase mb-4">{{ t('ready_to_start') }}</h2>
                     <a href="{{ $p }}/services/consultations" class="inline-block bg-accent text-asphaltBlack px-8 py-4 rounded-xl font-heading font-black text-xl uppercase hover:bg-yellow-400 transition-all shadow-[0_0_30px_rgba(253,208,82,0.3)] border-b-4 border-asphaltBlack/20">
-                        {{ $isEs ? 'Reserva Consulta Gratis' : 'Book Free Consult' }}
+                        {{ t('book_free_consult') }}
                     </a>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             ['q' => 'What\'s included in the free consultation?', 'qEs' => '¿Qué incluye la consulta gratuita?', 'a' => 'A 15-minute call to discuss your goals, followed by a complimentary in-person session to experience our training style.', 'aEs' => 'Una llamada de 15 minutos para discutir tus metas, seguida de una sesión presencial complementaria para experimentar nuestro estilo de entrenamiento.'],
         ]; @endphp
         <section class="max-w-3xl mx-auto px-4 py-24">
-            <h2 class="text-3xl md:text-4xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}</h2>
+            <h2 class="text-3xl md:text-4xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ t('frequently_asked_questions') }}</h2>
             <div class="space-y-4" x-data="{ openFaq: null }">
                 @foreach($aboutFaqs as $i => $faq)
                 <div class="bg-lightGray border border-gray-200 rounded-2xl overflow-hidden" x-data="{ open: false }">

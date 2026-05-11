@@ -6,10 +6,10 @@
             <div class="max-w-4xl mx-auto text-center relative z-10">
                 <a href="https://g.page/r/CQ8a1srEed1WEBM/review" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 mb-6 bg-white/10 px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all group">
                     <div class="flex items-center">@for($s=0; $s<5; $s++)<svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor</div>
-                    <span class="text-accent text-xs font-bold uppercase tracking-widest group-hover:underline">{{ $isEs ? '5.0 Reseñas en Google' : '5.0 Google Reviews' }}</span>
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest group-hover:underline">{{ t('50_google_reviews') }}</span>
                 </a>
-                <h1 class="text-4xl md:text-6xl font-heading font-black uppercase mb-4">{{ $isEs ? 'Lo Que Dicen Nuestros Clientes' : 'What Our Clients Say' }}</h1>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">{{ $isEs ? 'Resultados reales de personas reales.' : 'Real results from real people.' }}</p>
+                <h1 class="text-4xl md:text-6xl font-heading font-black uppercase mb-4">{{ t('what_our_clients_say') }}</h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">{{ t('real_results_from_real_people') }}</p>
             </div>
             <div class="absolute bottom-0 left-0 w-full h-2 bg-accent"></div>
         </div>
@@ -41,9 +41,9 @@
             <div class="mt-16 bg-asphaltBlack rounded-[3rem] p-12 text-white text-center relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
                 <div class="relative z-10">
-                    <h2 class="text-3xl md:text-5xl font-heading font-black uppercase mb-4">{{ $isEs ? '¿Listo para Ser el Próximo?' : 'Ready to Be Next?' }}</h2>
+                    <h2 class="text-3xl md:text-5xl font-heading font-black uppercase mb-4">{{ t('ready_to_be_next') }}</h2>
                     <a href="{{ $p }}/services/consultations" class="inline-flex items-center gap-3 bg-accent text-asphaltBlack px-8 py-4 rounded-xl font-heading font-black text-xl uppercase hover:bg-yellow-400 transition-all shadow-[0_0_30px_rgba(253,208,82,0.3)] border-b-4 border-asphaltBlack/20">
-                        {{ $isEs ? 'Consulta Gratis' : 'Book Free Consult' }}
+                        {{ t('book_free_consult') }}
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -56,7 +56,7 @@
             ['q' => 'Do you have more testimonials?', 'qEs' => '¿Tienen más testimonios?', 'a' => 'Yes! Visit our Google Reviews page for hundreds more reviews from real clients.', 'aEs' => '¡Sí! Visita nuestra página de Google Reviews para cientos más de reseñas de clientes reales.'],
         ]; @endphp
         <div class="max-w-3xl mx-auto px-4 pb-16">
-            <h2 class="text-3xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}</h2>
+            <h2 class="text-3xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack">{{ t('frequently_asked_questions') }}</h2>
             <div class="space-y-4" x-data="{ openFaq: null }">
                 @foreach($reviewsFaqs as $i => $faq)
                 <div class="bg-lightGray border border-gray-200 rounded-2xl overflow-hidden" x-data="{ open: false }">

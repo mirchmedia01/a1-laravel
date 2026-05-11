@@ -4,7 +4,7 @@
         <div class="absolute top-0 left-0 w-full px-4 md:px-8 z-10 pt-24">
             <div class="max-w-7xl mx-auto">
                 <x-breadcrumbs :crumbs="[
-                    ['label' => $isEs ? 'Servicios' : 'Services', 'url' => url($p . '/services')],
+                    ['label' => t('services'), 'url' => url($p . '/services')],
                     ['label' => $isEs && !empty($service['titleEs']) ? $service['titleEs'] : $service['title']],
                 ]" />
             </div>
@@ -15,7 +15,7 @@
             <div class="max-w-7xl mx-auto">
                 <a href="{{ $p }}/services" class="inline-flex items-center gap-2 text-white/70 hover:text-accent text-xs font-bold uppercase tracking-widest transition-colors bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                    {{ $isEs ? 'Volver a Servicios' : 'Back to Services' }}
+                    {{ t('back_to_services') }}
                 </a>
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
             <div class="lg:col-span-3 space-y-12">
                 <div>
-                    <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-6">{{ $isEs ? 'Descripción' : 'Overview' }}</h2>
+                    <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-6">{{ t('overview') }}</h2>
                     <p class="text-white/55 leading-[1.85] text-lg">{{ $isEs && !empty($service['longDescriptionEs']) ? $service['longDescriptionEs'] : ($service['longDescription'] ?? '') }}</p>
                 </div>
 
@@ -64,7 +64,7 @@
                 <div>
                     <h3 class="text-accent font-heading text-2xl uppercase tracking-tighter mb-6 flex items-center gap-3">
                         <span class="w-8 h-[2px] bg-accent inline-block"></span>
-                        {{ $isEs ? 'Lo Que Incluye' : 'What You Get' }}
+                        {{ t('what_you_get') }}
                     </h3>
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         @foreach(($isEs && !empty($service['benefitsEs']) ? $service['benefitsEs'] : $service['benefits']) as $benefit)
@@ -96,23 +96,23 @@
                         @endforeach
                     </div>
                     @else
-                    <p class="text-white/30 text-sm">{{ $isEs ? 'Precios próximamente.' : 'Pricing coming soon.' }}</p>
+                    <p class="text-white/30 text-sm">{{ t('pricing_coming_soon') }}</p>
                     @endif
 
-                    <a href="{{ $p }}/services/consultations" class="block w-full bg-accent text-black text-center py-4 rounded-xl font-heading font-black text-lg uppercase hover:bg-accent-light transition-all">{{ $isEs ? 'Reservar Ahora' : 'Book Now' }}</a>
+                    <a href="{{ $p }}/services/consultations" class="block w-full bg-accent text-black text-center py-4 rounded-xl font-heading font-black text-lg uppercase hover:bg-accent-light transition-all">{{ t('book_now') }}</a>
 
                     <div class="pt-2 border-t border-white/5 space-y-2">
                         <div class="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest">
                             <svg class="w-3.5 h-3.5 text-accent/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            {{ $isEs ? 'Sin contratos' : 'No contracts' }}
+                            {{ t('no_contracts') }}
                         </div>
                         <div class="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest">
                             <svg class="w-3.5 h-3.5 text-accent/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            {{ $isEs ? 'Consulta gratis de 15 min' : 'Free 15-min consultation' }}
+                            {{ t('free_15min_consultation') }}
                         </div>
                         <div class="flex items-center gap-2 text-white/30 text-xs font-bold uppercase tracking-widest">
                             <svg class="w-3.5 h-3.5 text-accent/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                            {{ $isEs ? 'Manhattan & Hamptons' : 'Manhattan & Hamptons' }}
+                            {{ t('manhattan_hamptons') }}
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
     @if(!empty($related))
     <section class="px-4 pb-8">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-white font-heading text-3xl uppercase tracking-tighter mb-8">{{ $isEs ? 'Servicios Relacionados' : 'Related Services' }}</h2>
+            <h2 class="text-white font-heading text-3xl uppercase tracking-tighter mb-8">{{ t('related_services') }}</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 @foreach($related as $rs)
                 <a href="{{ $p }}/services/{{ $rs['slug'] }}" class="bg-white/5 border border-white/10 rounded-[20px] p-6 hover:border-accent/40 transition-all group">
@@ -150,7 +150,7 @@
 
     <section class="px-4 pb-24">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ $isEs ? 'Preguntas Frecuentes' : 'FAQs' }}</h2>
+            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ t('faqs') }}</h2>
             <div class="space-y-4">
                 @foreach($faqs as $i => $faq)
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">

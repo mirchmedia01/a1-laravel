@@ -1,5 +1,5 @@
 @php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
-<section class="py-24 bg-white rounded-[40px] md:rounded-[60px] mx-2 md:mx-0 px-4 md:px-6">
+<section class="py-24 bg-white rounded-[40px] md:rounded-[60px] mx-2 md:mx-0 px-4 md:px-6 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <div class="inline-flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
@@ -12,7 +12,7 @@
             <div class="flex items-center justify-center gap-2 mt-4">
                 <div class="flex gap-0.5">@for($j=0; $j<5; $j++)<span class="text-accent text-xl">&star;</span>@endfor</div>
                 <span class="text-black font-heading text-2xl uppercase tracking-tighter">5.0</span>
-                <span class="text-black/40 text-sm font-bold uppercase tracking-widest">· 8 {{ $isEs ? 'reseñas' : 'reviews' }}</span>
+                <span class="text-black/40 text-sm font-bold uppercase tracking-widest">· 8 {{ t('reviews') }}</span>
             </div>
         </div>
 
@@ -49,7 +49,7 @@
 
         <div class="text-center mt-12">
             <a href="{{ $p }}/reviews" class="text-black/40 font-black uppercase tracking-widest text-[10px] hover:text-accent transition-colors border border-black/10 px-8 py-3 rounded-full inline-block">
-                {{ $isEs ? 'Ver Todas las Reseñas' : 'See All Reviews' }}
+                {{ t('see_all_reviews') }}
             </a>
         </div>
     </div>

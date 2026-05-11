@@ -7,14 +7,14 @@
         </a>
         <a href="{{ $p }}/services" class="flex flex-col items-center gap-1 text-white/40 hover:text-accent transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            <span class="text-[8px] font-bold uppercase tracking-widest">{{ $isEs ? 'Servicios' : 'Services' }}</span>
+            <span class="text-[8px] font-bold uppercase tracking-widest">{{ t('services') }}</span>
         </a>
         <a href="{{ $p }}/reviews" class="flex flex-col items-center gap-1 text-white/40 hover:text-accent transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <span class="text-[8px] font-bold uppercase tracking-widest">{{ $isEs ? 'Reseñas' : 'Reviews' }}</span>
+            <span class="text-[8px] font-bold uppercase tracking-widest">{{ t('reviews_1') }}</span>
         </a>
         <a href="{{ $p }}/services/consultations" class="flex items-center gap-1.5 bg-accent text-black px-4 py-2 rounded-full">
-            <span class="text-[8px] font-bold uppercase tracking-widest">{{ $isEs ? 'Consulta Gratis' : 'Free Consult' }}</span>
+            <span class="text-[8px] font-bold uppercase tracking-widest">{{ t('free_consult') }}</span>
         </a>
     </div>
 </div>

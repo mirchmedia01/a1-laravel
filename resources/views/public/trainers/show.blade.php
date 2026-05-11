@@ -4,7 +4,7 @@
         <div class="max-w-7xl mx-auto px-4 py-12 pt-28 md:pt-36">
             <a href="{{ $p }}/trainers" class="inline-flex items-center gap-2 text-white/40 hover:text-accent text-xs font-bold uppercase tracking-widest mb-12 transition-colors">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                {{ $isEs ? 'Volver al Equipo' : 'Back to Team' }}
+                {{ t('back_to_team') }}
             </a>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -31,7 +31,7 @@
                     <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase mb-10 leading-[1.1] accent-text-gradient italic inline-block py-1">{{ $trainer['name'] }}</h1>
 
                     <div class="mb-12">
-                        <h3 class="text-white font-heading text-4xl mb-6 uppercase border-b-2 border-accent inline-block">{{ $isEs ? 'Sobre Mí' : 'A Bit About Me' }}</h3>
+                        <h3 class="text-white font-heading text-4xl mb-6 uppercase border-b-2 border-accent inline-block">{{ t('a_bit_about_me') }}</h3>
                         <div class="space-y-6">
                             @php $bio = $isEs && !empty($trainer['longBioEs']) ? $trainer['longBioEs'] : ($trainer['longBio'] ?? $trainer['bio']); @endphp
                             @foreach(explode("\n\n", $bio) as $para)
@@ -42,7 +42,7 @@
 
                     @if(!empty($trainer['specialties']))
                     <div class="mb-12">
-                        <h3 class="text-white font-heading text-2xl mb-4 uppercase">{{ $isEs ? 'Especialidades' : 'Specialties' }}</h3>
+                        <h3 class="text-white font-heading text-2xl mb-4 uppercase">{{ t('specialties') }}</h3>
                         <div class="flex flex-wrap gap-2">
                             @foreach(($isEs && !empty($trainer['specialtiesEs']) ? $trainer['specialtiesEs'] : $trainer['specialties']) as $s)
                             <span class="bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full border border-accent/20">{{ $s }}</span>
@@ -52,16 +52,16 @@
                     @endif
 
                     <div class="space-y-4">
-                        <h3 class="text-white font-black uppercase tracking-widest text-[10px] mb-6 opacity-30">{{ $isEs ? 'Opciones de Reserva' : 'Booking Options' }}</h3>
+                        <h3 class="text-white font-black uppercase tracking-widest text-[10px] mb-6 opacity-30">{{ t('booking_options') }}</h3>
                         <div class="grid grid-cols-1 gap-4">
                             <a href="{{ $p }}/services/consultations" class="group flex items-center justify-between p-6 rounded-3xl border border-white/10 bg-white/5 hover:border-accent hover:bg-accent/10 transition-all">
-                                <span class="font-black uppercase tracking-tighter text-xl text-white group-hover:text-accent">{{ $isEs ? "Entrenemos en el Estudio" : "Let's Train at the Studio" }}</span>
+                                <span class="font-black uppercase tracking-tighter text-xl text-white group-hover:text-accent">{{ t('lets_train_at_the_studio') }}</span>
                                 <span class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-black group-hover:translate-x-2 transition-transform">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                 </span>
                             </a>
                             <a href="{{ $p }}/services/consultations" class="group flex items-center justify-between p-6 rounded-3xl border border-white/10 bg-white/5 hover:border-accent hover:bg-accent/10 transition-all">
-                                <span class="font-black uppercase tracking-tighter text-xl text-white group-hover:text-accent">{{ $isEs ? "Trae el Entrenamiento a Mí" : "Bring the Workout to Me" }}</span>
+                                <span class="font-black uppercase tracking-tighter text-xl text-white group-hover:text-accent">{{ t('bring_the_workout_to_me') }}</span>
                                 <span class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-black group-hover:translate-x-2 transition-transform">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                 </span>
@@ -76,13 +76,13 @@
             <div class="max-w-7xl mx-auto bg-white rounded-[60px] p-12 md:p-24 text-center border-[12px] border-black shadow-2xl overflow-hidden relative">
                 <div class="relative z-10">
                     <h2 class="text-black font-heading text-4xl md:text-6xl leading-none uppercase tracking-tighter mb-8">
-                        {{ $isEs ? '¿Listo para la' : 'Ready for' }} <br> <span class="text-accent italic">{{ $isEs ? 'Excelencia?' : 'Excellence?' }}</span>
+                        {{ t('ready_for') }} <br> <span class="text-accent italic">{{ t('excellence') }}</span>
                     </h2>
                     <p class="text-black/60 font-bold uppercase tracking-widest text-xs mb-12">
-                        {{ $isEs ? "Entrena con {$trainer['name']} hoy" : "Train with {$trainer['name']} today" }}
+                        {{ t('train_with_trainername_today') }}
                     </p>
                     <a href="{{ $p }}/services/consultations" class="btn-accent px-12 py-6 rounded-full font-heading text-2xl tracking-wide shadow-2xl inline-block">
-                        {{ $isEs ? 'Obtén Tu Primera Sesión' : 'Get Your First Session' }}
+                        {{ t('get_your_first_session') }}
                     </a>
                 </div>
                 <div class="absolute -bottom-20 -right-20 text-gray-100 text-[300px] font-heading leading-none select-none opacity-40 pointer-events-none">A1</div>

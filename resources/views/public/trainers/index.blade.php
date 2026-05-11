@@ -46,7 +46,7 @@
     ]; @endphp
     <section class="px-4 pb-24">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ $isEs ? 'Preguntas Frecuentes' : 'FAQs' }}</h2>
+            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ t('faqs') }}</h2>
             <div class="space-y-4">
                 @foreach($trainerFaqs as $i => $faq)
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">

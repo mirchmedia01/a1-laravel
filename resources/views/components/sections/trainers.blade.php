@@ -1,12 +1,12 @@
 @php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
-<section class="py-24 bg-black px-4 md:px-6">
+<section class="py-24 bg-black px-4 md:px-6 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div class="max-w-2xl">
-                <h2 class="text-white text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 leading-none italic italic-fix">{{ $isEs ? 'La Élite A1' : 'The A1 Elite' }}</h2>
-                <p class="text-white/40 font-medium text-lg italic italic-fix">{{ $isEs ? 'Experiencia a nivel doctoral y entrenadores certificados maestros a tu servicio.' : 'Doctoral-level expertise and master-certified trainers at your service.' }}</p>
+                <h2 class="text-white text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 leading-none italic italic-fix">{{ t('the_a1_elite') }}</h2>
+                <p class="text-white/40 font-medium text-lg italic italic-fix">{{ t('doctorallevel_expertise_and_mastercertified_trainers_at_your') }}</p>
             </div>
-            <a href="{{ $p }}/services/consultations" class="bg-white/5 border border-white/10 px-8 py-4 rounded-full text-white font-black uppercase tracking-widest text-[10px] hover:bg-accent hover:text-black transition-all shrink-0">{{ $isEs ? 'Reservar Ahora' : 'Book Now' }}</a>
+            <a href="{{ $p }}/services/consultations" class="bg-white/5 border border-white/10 px-8 py-4 rounded-full text-white font-black uppercase tracking-widest text-[10px] hover:bg-accent hover:text-black transition-all shrink-0">{{ t('book_now') }}</a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

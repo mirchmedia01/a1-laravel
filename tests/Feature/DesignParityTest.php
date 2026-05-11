@@ -62,6 +62,13 @@ class DesignParityTest extends TestCase
         $this->assertStringContainsString('animate-marquee', $html);
     }
 
+    public function test_homepage_has_scroll_reveal(): void
+    {
+        $html = $this->get('/')->getContent();
+        $this->assertStringContainsString('scroll-reveal', $html);
+        $this->assertStringContainsString('x-intersect', $html);
+    }
+
     public function test_homepage_has_footer_cta(): void
     {
         $html = $this->get('/')->getContent();

@@ -3,7 +3,7 @@
     <section class="relative pt-28 pb-20 px-4 overflow-hidden">
         <div class="max-w-5xl mx-auto relative z-10">
             <x-breadcrumbs :crumbs="[
-                ['label' => $isEs ? 'Servicios' : 'Services', 'url' => url($p . '/services')],
+                ['label' => t('services'), 'url' => url($p . '/services')],
                 ['label' => $isEs ? $page['titleEs'] : $page['title'],
                  'url' => url($p . '/services/' . $slug)],
                 ['label' => $isEs ? $page['headlineEs'] : $page['headline']],
@@ -33,7 +33,7 @@
     @if(!empty($page['faq']))
     <section class="px-4 pb-20">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ $isEs ? 'Preguntas Frecuentes' : 'FAQ' }}</h2>
+            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ t('faq') }}</h2>
             <div class="space-y-4">
                 @foreach($page['faq'] as $faq)
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">
@@ -56,7 +56,7 @@
     @endphp
     <section class="px-4 pb-8">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-white font-heading text-2xl md:text-3xl uppercase tracking-tighter mb-6">{{ $isEs ? 'Otros Servicios' : 'Other Services' }}</h2>
+            <h2 class="text-white font-heading text-2xl md:text-3xl uppercase tracking-tighter mb-6">{{ t('other_services') }}</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 @foreach($relatedServices as $rs)
                 <a href="{{ url($isEs ? '/es/services' : '/services') }}/{{ $rs['slug'] }}" class="bg-white/5 border border-white/10 rounded-[20px] p-5 hover:border-accent/40 transition-all group">
@@ -71,7 +71,7 @@
     <section class="px-4 pb-24">
         <div class="max-w-3xl mx-auto text-center">
             <a href="{{ url($isEs ? '/es/contact' : '/contact') }}" class="inline-block bg-accent text-black px-10 py-4 rounded-full font-heading font-black text-lg uppercase tracking-widest hover:bg-white transition-all">
-                {{ $isEs ? ($page['ctas'][0] ?? 'Contáctanos') : ($page['ctas'][0] ?? 'Contact Us') }}
+                {{ $page['ctas'][0] ?? ($isEs ? 'Contáctanos' : 'Contact Us') }}
             </a>
         </div>
     </section>

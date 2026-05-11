@@ -5,10 +5,10 @@
             <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url(/images/logo.avif); background-size: cover; background-position: center; filter: blur(20px);"></div>
             <div class="max-w-7xl mx-auto relative z-10 text-center">
                 <h1 class="text-5xl md:text-7xl font-heading font-black uppercase mb-6 tracking-tight">
-                    {{ $isEs ? 'Contáctenos' : 'Contact Us' }}
+                    {{ t('contact_us') }}
                 </h1>
                 <p class="text-xl text-gray-400 max-w-2xl mx-auto font-medium">
-                    {{ $isEs ? '¿Tiene preguntas sobre nuestros servicios o necesita ayuda? Estamos para ayudarle.' : 'Have questions about our services or need help? We\'re here to help you.' }}
+                    {{ t('have_questions_about_our_services_or_need_help_were_here_to') }}
                 </p>
             </div>
             <div class="absolute bottom-0 left-0 w-full h-2 bg-accent"></div>
@@ -20,7 +20,7 @@
                     <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-6">
                         <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </div>
-                    <h3 class="font-heading text-2xl font-black text-asphaltBlack uppercase mb-2">{{ $isEs ? 'Llámenos' : 'Call Us' }}</h3>
+                    <h3 class="font-heading text-2xl font-black text-asphaltBlack uppercase mb-2">{{ t('call_us') }}</h3>
                     <p class="text-gray-500 mb-4 text-sm font-medium">Mon-Sat 6AM - 9PM</p>
                     <a href="tel:8888722504" class="text-2xl font-black text-accent hover:text-asphaltBlack transition-colors">(888) 872-2504</a>
                 </div>
@@ -29,8 +29,8 @@
                     <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-6">
                         <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     </div>
-                    <h3 class="font-heading text-2xl font-black text-asphaltBlack uppercase mb-2">{{ $isEs ? 'Área de Servicio' : 'Service Area' }}</h3>
-                    <p class="text-gray-500 mb-4 text-sm font-medium">{{ $isEs ? 'Servicio a domicilio en Manhattan y más' : 'In-home service in Manhattan and beyond' }}</p>
+                    <h3 class="font-heading text-2xl font-black text-asphaltBlack uppercase mb-2">{{ t('service_area') }}</h3>
+                    <p class="text-gray-500 mb-4 text-sm font-medium">{{ t('inhome_service_in_manhattan_and_beyond') }}</p>
                     <span class="text-lg font-bold text-gray-800">Manhattan, NYC</span>
                 </div>
 
@@ -38,8 +38,8 @@
                     <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent mb-6">
                         <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     </div>
-                    <h3 class="font-heading text-2xl font-black text-asphaltBlack uppercase mb-2">{{ $isEs ? 'Escríbanos' : 'Email Us' }}</h3>
-                    <p class="text-gray-500 mb-4 text-sm font-medium">{{ $isEs ? 'Respuesta dentro de 24 horas' : 'Response within 24 hours' }}</p>
+                    <h3 class="font-heading text-2xl font-black text-asphaltBlack uppercase mb-2">{{ t('email_us') }}</h3>
+                    <p class="text-gray-500 mb-4 text-sm font-medium">{{ t('response_within_24_hours') }}</p>
                     <a href="mailto:info@a1traininggroupllc.com" class="text-xl font-black text-accent hover:text-asphaltBlack transition-colors">info@a1traininggroupllc.com</a>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100">
                         <div class="flex items-center gap-3 mb-6">
                             <svg class="w-6 h-6 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                            <h3 class="font-heading text-2xl font-black uppercase text-asphaltBlack">{{ $isEs ? 'Preguntas Frecuentes' : 'Common Questions' }}</h3>
+                            <h3 class="font-heading text-2xl font-black uppercase text-asphaltBlack">{{ t('common_questions') }}</h3>
                         </div>
                         <div class="space-y-4" x-data="{ openFaq: null }">
                             @php $contactFaqs = [
@@ -80,18 +80,18 @@
 
                 <div class="bg-asphaltBlack text-white p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <h2 class="text-3xl font-heading font-black uppercase mb-2 relative z-10">{{ $isEs ? 'Envíe un Mensaje' : 'Send a Message' }}</h2>
-                    <p class="text-gray-400 mb-8 relative z-10">{{ $isEs ? 'Complete el formulario y le responderemos en breve.' : "Fill out the form below and we'll get back to you shortly." }}</p>
+                    <h2 class="text-3xl font-heading font-black uppercase mb-2 relative z-10">{{ t('send_a_message') }}</h2>
+                    <p class="text-gray-400 mb-8 relative z-10">{{ t('fill_out_the_form_below_and_well_get_back_to_you_shortly') }}</p>
 
                     <form method="POST" action="{{ route(app()->getLocale() === 'es' ? 'es.contact.submit' : 'contact.submit') }}" class="space-y-4 relative z-10" x-data="{ loading: false }" @submit="loading = true">
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="space-y-1">
                                 <label class="text-xs font-bold uppercase text-accent tracking-widest">{{ t('contact.form.name') }}</label>
-                                <input required type="text" name="name" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:bg-white/20 outline-none transition-all placeholder:text-gray-500" placeholder="{{ $isEs ? 'Juan Pérez' : 'John Doe' }}">
+                                <input required type="text" name="name" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:bg-white/20 outline-none transition-all placeholder:text-gray-500" placeholder="{{ t('john_doe') }}">
                             </div>
                             <div class="space-y-1">
-                                <label class="text-xs font-bold uppercase text-accent tracking-widest">{{ $isEs ? 'Teléfono' : 'Phone' }}</label>
+                                <label class="text-xs font-bold uppercase text-accent tracking-widest">{{ t('phone') }}</label>
                                 <input type="tel" name="phone" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:bg-white/20 outline-none transition-all placeholder:text-gray-500" placeholder="(555) 123-4567">
                             </div>
                         </div>
@@ -101,12 +101,12 @@
                         </div>
                         <div class="space-y-1">
                             <label class="text-xs font-bold uppercase text-accent tracking-widest">{{ t('contact.form.message') }}</label>
-                            <textarea required rows="4" name="message" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:bg-white/20 outline-none transition-all placeholder:text-gray-500" placeholder="{{ $isEs ? 'Estoy interesado en...' : 'I\'m interested in...' }}"></textarea>
+                            <textarea required rows="4" name="message" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:bg-white/20 outline-none transition-all placeholder:text-gray-500" placeholder="{{ t('im_interested_in') }}"></textarea>
                         </div>
                         <button type="submit" :disabled="loading"
                                 class="w-full font-heading text-xl font-black py-4 rounded-xl transition-all flex items-center justify-center gap-2 mt-4 shadow-lg bg-accent text-asphaltBlack hover:bg-white hover:scale-[1.02] disabled:opacity-50">
-                            <span x-show="!loading">{{ $isEs ? 'ENVIAR MENSAJE' : 'SEND MESSAGE' }} <svg class="w-5 h-5 inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
-                            <span x-show="loading" class="flex items-center gap-2"><svg class="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> {{ $isEs ? 'ENVIANDO...' : 'SENDING...' }}</span>
+                            <span x-show="!loading">{{ t('send_message') }} <svg class="w-5 h-5 inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+                            <span x-show="loading" class="flex items-center gap-2"><svg class="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> {{ t('sending') }}</span>
                         </button>
                         @if(session('success'))
                         <p class="text-accent text-sm text-center font-bold">{{ session('success') }}</p>

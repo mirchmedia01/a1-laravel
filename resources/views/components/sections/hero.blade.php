@@ -1,23 +1,23 @@
 @php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
-<section class="pt-24 md:pt-32 pb-12 md:pb-20 px-4 bg-black relative overflow-hidden">
+<section class="pt-24 md:pt-32 pb-12 md:pb-20 px-4 bg-black relative overflow-hidden" x-intersect="$el.classList.add('is-visible')">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/4 left-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-accent/5 rounded-full blur-[80px] md:blur-[120px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-accent/3 rounded-full blur-[60px] md:blur-[100px]"></div>
     </div>
 
     <div class="max-w-7xl mx-auto relative z-10">
-        <div class="bg-white rounded-t-[30px] md:rounded-t-[40px] px-6 md:px-8 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="bg-white rounded-t-[30px] md:rounded-t-[40px] px-6 md:px-8 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 scroll-reveal">
             <span class="text-black font-black uppercase text-[10px] md:text-sm tracking-widest text-center md:text-left">{{ t('home.hero.tagline') }}</span>
             <div class="flex flex-wrap justify-center gap-3 md:gap-4 text-black/40 text-[9px] md:text-[10px] font-black tracking-widest uppercase">
-                <span>01. {{ $isEs ? 'PERSONAL' : 'PERSONAL' }}</span>
+                <span>01. {{ t('personal') }}</span>
                 <span class="text-accent opacity-50">/</span>
-                <span>02. {{ $isEs ? 'GRUPO' : 'GROUP' }}</span>
+                <span>02. {{ t('group') }}</span>
                 <span class="text-accent opacity-50">/</span>
-                <span>03. {{ $isEs ? 'TERAPIA' : 'THERAPY' }}</span>
+                <span>03. {{ t('therapy') }}</span>
             </div>
         </div>
 
-        <div class="bg-white rounded-b-[30px] md:rounded-b-[40px] p-6 md:p-16 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-12 relative">
+        <div class="bg-white rounded-b-[30px] md:rounded-b-[40px] p-6 md:p-16 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 md:gap-12 relative scroll-reveal">
             <div class="relative z-10 flex flex-col justify-center">
                 <h1 class="text-black font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[80px] xl:text-[100px] leading-[1.05] tracking-tighter uppercase mb-6 md:mb-10 pt-1">
                     <span class="block">{{ t('home.hero.title') }}</span>
@@ -59,7 +59,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div class="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6">
                                 <span class="bg-black/90 backdrop-blur px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[8px] md:text-[10px] font-black text-accent uppercase tracking-widest border border-accent/30 group-hover:bg-accent group-hover:text-black transition-all duration-300">
-                                    {{ $isEs ? 'Entrenador Maestro' : 'Master Trainer' }}
+                                    {{ t('master_trainer') }}
                                 </span>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                             <img src="/images/training/personal-training-hero.png" alt="Elite Fitness" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
                             <div class="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6 bg-accent p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-xl translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                 <p class="text-black text-[8px] md:text-[10px] font-black leading-tight uppercase tracking-tighter">
-                                    {{ $isEs ? 'Tus metas son nuestra misión. NYC\'s best elite fitness.' : 'Your goals are our mission. NYC\'s best elite fitness.' }}
+                                    {{ t('your_goals_are_our_mission_nycs_best_elite_fitness') }}
                                 </p>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                 </div>
                                 @endforeach
                             </div>
-                            <span class="text-black/80 font-black text-[8px] md:text-[10px] uppercase tracking-widest">12k+ {{ $isEs ? 'Élite' : 'Elite' }}</span>
+                            <span class="text-black/80 font-black text-[8px] md:text-[10px] uppercase tracking-widest">12k+ {{ t('elite') }}</span>
                         </div>
                     </div>
                 </div>

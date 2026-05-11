@@ -3,7 +3,7 @@
     <section class="py-24 md:py-32 px-4 relative overflow-hidden pt-36">
         <div class="max-w-4xl mx-auto relative z-10">
             <h1 class="text-white font-heading text-4xl sm:text-5xl md:text-7xl tracking-tighter uppercase mb-6 leading-[1.1]">
-                {{ $isEs ? 'Horario de Clases' : 'Class Schedule' }}
+                {{ t('class_schedule') }}
             </h1>
             <p class="text-white/40 text-lg max-w-2xl leading-relaxed mb-8">{{ $isEs
                 ? 'A1 Training Group ofrece horarios flexibles que se adaptan a tu estilo de vida. Entrena por la mañana, tarde o noche — en nuestro estudio, en tu casa o virtualmente.'
@@ -13,26 +13,26 @@
                     <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-black font-heading text-2xl font-black">AM</span>
                     </div>
-                    <h3 class="text-white font-heading text-xl font-black uppercase mb-2">{{ $isEs ? 'Mañana' : 'Morning' }}</h3>
-                    <p class="text-white/40 text-sm">{{ $isEs ? '6:00 AM - 12:00 PM' : '6:00 AM - 12:00 PM' }}</p>
+                    <h3 class="text-white font-heading text-xl font-black uppercase mb-2">{{ t('morning') }}</h3>
+                    <p class="text-white/40 text-sm">{{ t('600_am_1200_pm') }}</p>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 text-center">
                     <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-black font-heading text-2xl font-black">PM</span>
                     </div>
-                    <h3 class="text-white font-heading text-xl font-black uppercase mb-2">{{ $isEs ? 'Tarde' : 'Afternoon' }}</h3>
-                    <p class="text-white/40 text-sm">{{ $isEs ? '12:00 PM - 6:00 PM' : '12:00 PM - 6:00 PM' }}</p>
+                    <h3 class="text-white font-heading text-xl font-black uppercase mb-2">{{ t('afternoon') }}</h3>
+                    <p class="text-white/40 text-sm">{{ t('1200_pm_600_pm') }}</p>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 text-center">
                     <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-black font-heading text-2xl font-black">PM</span>
                     </div>
-                    <h3 class="text-white font-heading text-xl font-black uppercase mb-2">{{ $isEs ? 'Noche' : 'Evening' }}</h3>
-                    <p class="text-white/40 text-sm">{{ $isEs ? '6:00 PM - 9:00 PM' : '6:00 PM - 9:00 PM' }}</p>
+                    <h3 class="text-white font-heading text-xl font-black uppercase mb-2">{{ t('evening') }}</h3>
+                    <p class="text-white/40 text-sm">{{ t('600_pm_900_pm') }}</p>
                 </div>
             </div>
             <div class="mt-12 text-center">
-                <a href="{{ $p }}/contact" class="inline-block bg-accent text-black px-10 py-4 rounded-full font-heading font-black text-lg uppercase tracking-widest hover:bg-white transition-all">{{ $isEs ? 'Reserva tu Sesión' : 'Book Your Session' }}</a>
+                <a href="{{ $p }}/contact" class="inline-block bg-accent text-black px-10 py-4 rounded-full font-heading font-black text-lg uppercase tracking-widest hover:bg-white transition-all">{{ t('book_your_session') }}</a>
             </div>
         </div>
     </section>
@@ -45,7 +45,7 @@
     ]; @endphp
     <section class="px-4 pb-24">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ $isEs ? 'Preguntas Frecuentes' : 'FAQs' }}</h2>
+            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ t('faqs') }}</h2>
             <div class="space-y-4">
                 @foreach($faqs as $i => $faq)
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">

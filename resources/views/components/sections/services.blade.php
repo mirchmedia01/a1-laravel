@@ -1,10 +1,10 @@
 @php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
-<section class="py-24 px-4 md:px-6">
+<section class="py-24 px-4 md:px-6 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div class="max-w-2xl">
                 <h2 class="text-white text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6 leading-none">
-                    {{ $isEs ? 'Nuestros Servicios' : 'Our Services' }}
+                    {{ t('our_services') }}
                 </h2>
                 <p class="text-white/40 font-medium text-lg">{{ t('home.services.subtitle') }}</p>
             </div>
@@ -29,7 +29,7 @@
                         <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-black group-hover:scale-110 transition-transform">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </div>
-                        <span class="text-white font-black text-[10px] uppercase tracking-widest">{{ $isEs ? 'Ver Precios' : 'View Pricing' }}</span>
+                        <span class="text-white font-black text-[10px] uppercase tracking-widest">{{ t('view_pricing') }}</span>
                     </div>
                 </div>
             </a>

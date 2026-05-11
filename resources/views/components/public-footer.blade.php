@@ -50,8 +50,8 @@
             <div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-white/20 text-xs">{{ t('footer.copyright') }}</p>
                 <div class="flex gap-6">
-                    <a href="{{ $p }}/privacy" class="text-white/20 hover:text-accent text-xs transition-colors">{{ $isEs ? 'Privacidad' : 'Privacy' }}</a>
-                    <a href="{{ $p }}/terms" class="text-white/20 hover:text-accent text-xs transition-colors">{{ $isEs ? 'Términos' : 'Terms' }}</a>
+                    <a href="{{ $p }}/privacy" class="text-white/20 hover:text-accent text-xs transition-colors">{{ t('privacy') }}</a>
+                    <a href="{{ $p }}/terms" class="text-white/20 hover:text-accent text-xs transition-colors">{{ t('terms') }}</a>
                 </div>
             </div>
         </div>

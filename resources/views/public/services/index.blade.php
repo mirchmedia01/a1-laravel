@@ -4,9 +4,9 @@
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="max-w-7xl mx-auto relative z-10">
             <h1 class="text-white font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter uppercase mb-6 leading-[1.1]">
-                {{ $isEs ? 'Nuestros' : 'Our' }} <span class="accent-text-gradient italic inline-block py-1">{{ $isEs ? 'Servicios' : 'Services' }}</span>
+                {{ t('our') }} <span class="accent-text-gradient italic inline-block py-1">{{ t('services') }}</span>
             </h1>
-            <p class="text-white/40 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">{{ $isEs ? 'Elige la opción que mejor se adapte a tu estilo de vida.' : 'Choose the service option that best fits your lifestyle.' }}</p>
+            <p class="text-white/40 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">{{ t('choose_the_service_option_that_best_fits_your_lifestyle') }}</p>
         </div>
     </section>
 
@@ -38,7 +38,7 @@
     ]; @endphp
     <section class="px-4 pb-24">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}</h2>
+            <h2 class="text-white font-heading text-3xl md:text-4xl uppercase tracking-tighter mb-8 text-center">{{ t('frequently_asked_questions') }}</h2>
             <div class="space-y-4">
                 @foreach($faqs as $i => $faq)
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-6" x-data="{ open: false }">
