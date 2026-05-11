@@ -10,7 +10,12 @@ if (! function_exists('load_translations')) {
         if (isset($cache[$locale])) {
             return $cache[$locale];
         }
+
         $jsonPath = lang_path("{$locale}.json");
+        if (! file_exists($jsonPath)) {
+            $jsonPath = base_path("lang/{$locale}.json");
+        }
+
         $cache[$locale] = file_exists($jsonPath) ? (json_decode(file_get_contents($jsonPath), true) ?? []) : [];
 
         return $cache[$locale];
