@@ -22,11 +22,18 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        if (env('APP_ENV') === 'production') {
+        Request::setTrustedProxies(['*'], Request::HEADER_X_FORWARDED_ALL);
+
+        $appUrl = env('APP_URL', '');
+        if (str_contains($appUrl, 'railway.app')) {
+            $httpsUrl = str_replace('http://', 'https://', $appUrl);
+            config(['app.url' => $httpsUrl]);
+            config(['app.asset_url' => $httpsUrl]);
+            URL::forceRootUrl($httpsUrl);
+            URL::forceScheme('https');
+        } elseif (env('APP_ENV') === 'production') {
             URL::forceScheme('https');
         }
-
-        Request::setTrustedProxies(['*'], Request::HEADER_X_FORWARDED_ALL);
 
         if (! env('MONGODB_URI') || ! extension_loaded('mongodb')) {
             config(['database.default' => 'sqlite']);
