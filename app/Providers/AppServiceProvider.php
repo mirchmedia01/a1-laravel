@@ -44,17 +44,4 @@ class AppServiceProvider extends ServiceProvider
             }
         }
     }
-
-        if (! env('MONGODB_URI') || ! extension_loaded('mongodb')) {
-            config(['database.default' => 'sqlite']);
-        }
-
-        if (extension_loaded('mongodb')) {
-            try {
-                DB::connection('mongodb')->getMongoClient()->listDatabases();
-            } catch (\Throwable $e) {
-                config(['database.default' => 'sqlite']);
-            }
-        }
-    }
 }
