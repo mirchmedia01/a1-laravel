@@ -48,13 +48,13 @@
 
             <div class="hidden lg:grid grid-cols-2 gap-4">
                 <div class="aspect-3/4 rounded-[40px] overflow-hidden border border-white/10 group">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=800&fit=crop" alt="Master Trainer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=800&fit=crop" alt="Master Trainer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-700">
                     <div class="absolute bottom-4 left-4 bg-black/80 px-4 py-2 rounded-full">
                         <span class="text-white text-[10px] font-bold uppercase tracking-widest">Master Trainer</span>
                     </div>
                 </div>
                 <div class="aspect-3/4 rounded-[40px] overflow-hidden border border-white/10 group mt-12">
-                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d17a4d?w=600&h=800&fit=crop" alt="Elite Fitness" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d17a4d?w=600&h=800&fit=crop" alt="Elite Fitness" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-700">
                     <div class="absolute bottom-4 left-4 bg-black/80 px-4 py-2 rounded-full">
                         <span class="text-white text-[10px] font-bold uppercase tracking-widest">Elite Fitness</span>
                     </div>

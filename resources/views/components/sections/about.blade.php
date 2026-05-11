@@ -48,17 +48,17 @@
             {{ $isEs ? 'Nuestros Pilares' : 'Our Pillars' }}
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
-            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[30px] md:rounded-[40px] hover:border-accent transition-all duration-500">
+            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[30px] md:rounded-[40px] hover:border-accent transition-colors duration-500">
                 <div class="text-accent font-heading text-3xl md:text-4xl mb-4 md:mb-6">01</div>
                 <h3 class="text-white font-heading text-3xl md:text-4xl mb-3 md:mb-4 uppercase leading-none">{{ $isEs ? 'Precisión' : 'Precision' }}</h3>
                 <p class="text-white/40 leading-relaxed text-sm md:text-base">{{ $isEs ? 'Cada repetición y cada movimiento se analiza para máxima eficiencia y seguridad.' : 'Every rep and every movement is analyzed for maximum efficiency and safety.' }}</p>
             </div>
-            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[30px] md:rounded-[40px] hover:border-accent transition-all duration-500">
+            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[30px] md:rounded-[40px] hover:border-accent transition-colors duration-500">
                 <div class="text-accent font-heading text-3xl md:text-4xl mb-4 md:mb-6">02</div>
                 <h3 class="text-white font-heading text-3xl md:text-4xl mb-3 md:mb-4 uppercase leading-none">{{ $isEs ? 'Privacidad' : 'Privacy' }}</h3>
                 <p class="text-white/40 leading-relaxed text-sm md:text-base">{{ $isEs ? 'Sin multitudes. Sin distracciones. Solo tú y un profesional maestro en tu espacio preferido.' : 'No crowds. No distractions. Just you and a master professional in your preferred space.' }}</p>
             </div>
-            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[30px] md:rounded-[40px] hover:border-accent transition-all duration-500">
+            <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-[30px] md:rounded-[40px] hover:border-accent transition-colors duration-500">
                 <div class="text-accent font-heading text-3xl md:text-4xl mb-4 md:mb-6">03</div>
                 <h3 class="text-white font-heading text-3xl md:text-4xl mb-3 md:mb-4 uppercase leading-none">{{ $isEs ? 'Rendimiento' : 'Performance' }}</h3>
                 <p class="text-white/40 leading-relaxed text-sm md:text-base">{{ $isEs ? 'No solo entrenamos; optimizamos. Miramos nutrición, sueño y recuperación de forma holística.' : "We don't just train; we optimize. We look at nutrition, sleep, and recovery holistically." }}</p>

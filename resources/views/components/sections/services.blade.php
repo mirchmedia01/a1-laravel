@@ -17,7 +17,7 @@
                 $img = $service['image'] ?? '';
             @endphp
             <a href="{{ $p }}/services/{{ $slug }}"
-               class="{{ $idx === 0 ? 'md:col-span-2 md:row-span-2' : '' }} group relative rounded-[30px] overflow-hidden border border-white/5 hover:border-accent/40 transition-all duration-700 aspect-4/5 block">
+               class="{{ $idx === 0 ? 'md:col-span-2 md:row-span-2' : '' }} group relative rounded-[30px] overflow-hidden border border-white/5 hover:border-accent/40 transition-transform duration-1000 aspect-4/5 block">
                 <img src="{{ $img }}" alt="{{ $label }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6 z-10">

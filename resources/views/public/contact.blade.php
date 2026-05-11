@@ -31,16 +31,16 @@
                 <form method="POST" action="{{ route(app()->getLocale() === 'es' ? 'es.contact.submit' : 'contact.submit') }}" class="space-y-6" x-data="{ loading: false }" @submit="loading = true">
                     @csrf
                     <div>
-                        <label class="text-white/40 text-xs font-bold uppercase tracking-widest block mb-2">{{ t('contact.form.name') }}</label>
-                        <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:outline-none transition-colors">
+                        <label for="contact_name" class="text-white/40 text-xs font-bold uppercase tracking-widest block mb-2">{{ t('contact.form.name') }}</label>
+                        <input id="contact_name" type="text" name="name" autocomplete="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors">
                     </div>
                     <div>
-                        <label class="text-white/40 text-xs font-bold uppercase tracking-widest block mb-2">{{ t('contact.form.email') }}</label>
-                        <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:outline-none transition-colors">
+                        <label for="contact_email" class="text-white/40 text-xs font-bold uppercase tracking-widest block mb-2">{{ t('contact.form.email') }}</label>
+                        <input id="contact_email" type="email" name="email" autocomplete="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors">
                     </div>
                     <div>
-                        <label class="text-white/40 text-xs font-bold uppercase tracking-widest block mb-2">{{ t('contact.form.message') }}</label>
-                        <textarea name="message" rows="5" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus:outline-none transition-colors"></textarea>
+                        <label for="contact_message" class="text-white/40 text-xs font-bold uppercase tracking-widest block mb-2">{{ t('contact.form.message') }}</label>
+                        <textarea id="contact_message" name="message" rows="5" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/50 transition-colors"></textarea>
                     </div>
                     <button type="submit" :disabled="loading" class="w-full bg-accent text-black py-4 rounded-xl font-heading font-black text-lg uppercase hover:bg-accent/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
                         <span x-show="!loading">{{ t('contact.form.submit') }}</span>

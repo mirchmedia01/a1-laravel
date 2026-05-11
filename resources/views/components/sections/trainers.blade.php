@@ -12,7 +12,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($trainers ?? [] as $idx => $trainer)
             <a href="{{ $p }}/trainers/{{ $trainer['slug'] }}"
-               class="{{ $idx === 0 ? 'lg:col-span-2 lg:row-span-2' : '' }} group relative rounded-[40px] overflow-hidden border border-white/5 hover:border-accent/40 transition-all duration-700 aspect-4/5 lg:aspect-auto block shadow-2xl">
+               class="{{ $idx === 0 ? 'lg:col-span-2 lg:row-span-2' : '' }} group relative rounded-[40px] overflow-hidden border border-white/5 hover:border-accent/40 transition-transform duration-1000 aspect-4/5 lg:aspect-auto block shadow-2xl">
                 <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=1000&fit=crop" alt="{{ $trainer['name'] }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6 z-10">
