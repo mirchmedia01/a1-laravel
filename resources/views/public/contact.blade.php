@@ -4,6 +4,7 @@
         <div class="bg-asphaltBlack text-white py-24 px-4 relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url(/images/logo.avif); background-size: cover; background-position: center; filter: blur(20px);"></div>
             <div class="max-w-7xl mx-auto relative z-10 text-center">
+                <x-breadcrumbs :crumbs="[['label' => t('nav.contact')]]" />
                 <h1 class="text-5xl md:text-7xl font-heading font-black uppercase mb-6 tracking-tight">
                     {{ t('contact_us') }}
                 </h1>

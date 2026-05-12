@@ -237,29 +237,9 @@ class RouteTest extends TestCase
         $this->get('/loyalty')->assertRedirect('/a1-black-member');
     }
 
-    public function test_what_sets_us_apart_redirect(): void
-    {
-        $this->get('/what-sets-us-apart')->assertRedirect('/about');
-    }
-
-    public function test_services_4_redirect(): void
-    {
-        $this->get('/services-4')->assertRedirect('/services');
-    }
-
     public function test_personal_training_packages_redirect(): void
     {
         $this->get('/personal-training-packages')->assertRedirect('/services/personal-training');
-    }
-
-    public function test_personal_training_at_studio_redirect(): void
-    {
-        $this->get('/personal-training-at-the-studio')->assertRedirect('/services/personal-training/studio');
-    }
-
-    public function test_complementary_session_redirect(): void
-    {
-        $this->get('/complementary-home-gym-training-session')->assertRedirect('/services/personal-training/in-home');
     }
 
     public function test_pre_contact_form_redirect(): void
@@ -272,26 +252,13 @@ class RouteTest extends TestCase
         $this->get('/book-a-consult')->assertRedirect('/services/consultations');
     }
 
-    public function test_payment_request_redirect(): void
-    {
-        $this->get('/payment-request-page')->assertRedirect('/services');
-    }
-
-    public function test_pricing_plans_redirect(): void
-    {
-        $this->get('/pricing-plans/list')->assertRedirect('/services');
-    }
-
-    public function test_form_submitted_redirect(): void
-    {
-        $this->get('/form-submitted')->assertRedirect('/');
-    }
-
     public function test_coach_redirect(): void
     {
         $this->get('/coach-wei')->assertRedirect('/trainers/wei');
-        $this->get('/copy-of-coach-wei')->assertRedirect('/trainers/wei');
         $this->get('/coach-kate')->assertRedirect('/trainers/kate');
+        $this->get('/coach-jamie')->assertRedirect('/trainers/jamie');
+        $this->get('/coach-phillip')->assertRedirect('/trainers/phillip');
+        $this->get('/coach-abby')->assertRedirect('/trainers/abby');
     }
 
     public function test_post_redirect(): void

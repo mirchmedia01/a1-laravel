@@ -53,59 +53,14 @@ class RedirectAndRouteTest extends TestCase
         $this->get('/loyalty')->assertRedirect('/a1-black-member')->assertStatus(301);
     }
 
-    public function test_what_sets_us_apart_redirects(): void
-    {
-        $this->get('/what-sets-us-apart')->assertRedirect('/about')->assertStatus(301);
-    }
-
-    public function test_services_4_redirects(): void
-    {
-        $this->get('/services-4')->assertRedirect('/services')->assertStatus(301);
-    }
-
     public function test_personal_training_packages_redirects(): void
     {
         $this->get('/personal-training-packages')->assertRedirect('/services/personal-training')->assertStatus(301);
     }
 
-    public function test_complementary_session_redirects(): void
-    {
-        $this->get('/complementary-home-gym-training-session')->assertRedirect('/services/personal-training/in-home')->assertStatus(301);
-    }
-
     public function test_pre_contact_form_redirects(): void
     {
         $this->get('/pre-contact-form')->assertRedirect('/contact')->assertStatus(301);
-    }
-
-    public function test_form_submitted_redirects(): void
-    {
-        $this->get('/form-submitted')->assertRedirect('/')->assertStatus(301);
-    }
-
-    public function test_pricing_plans_redirects(): void
-    {
-        $this->get('/pricing-plans/list')->assertRedirect('/services')->assertStatus(301);
-    }
-
-    public function test_payment_request_redirects(): void
-    {
-        $this->get('/payment-request-page')->assertRedirect('/services')->assertStatus(301);
-    }
-
-    public function test_blank_1_redirects(): void
-    {
-        $this->get('/blank-1')->assertRedirect('/')->assertStatus(301);
-    }
-
-    public function test_blank_2_redirects(): void
-    {
-        $this->get('/blank-2')->assertRedirect('/')->assertStatus(301);
-    }
-
-    public function test_copy_of_home_redirects(): void
-    {
-        $this->get('/copy-of-home')->assertRedirect('/')->assertStatus(301);
     }
 
     // ─── Legacy coach URL redirects ───

@@ -4,6 +4,7 @@
         <div class="bg-asphaltBlack text-white py-20 px-4 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
             <div class="max-w-4xl mx-auto text-center relative z-10">
+                <x-breadcrumbs :crumbs="[['label' => t('nav.reviews')]]" />
                 <a href="https://g.page/r/CQ8a1srEed1WEBM/review" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 mb-6 bg-white/10 px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all group">
                     <div class="flex items-center">@for($s=0; $s<5; $s++)<svg class="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>@endfor</div>
                     <span class="text-accent text-xs font-bold uppercase tracking-widest group-hover:underline">{{ t('50_google_reviews') }}</span>
@@ -52,10 +53,6 @@
 
         <div class="max-w-3xl mx-auto px-4 pb-16">
             <x-faq-accordion :faqs="load_faq('reviews')" title="{{ $isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions' }}" :headingClass="'text-3xl font-heading font-black uppercase mb-8 text-center text-asphaltBlack'" :itemClass="'bg-lightGray border border-gray-200 rounded-2xl overflow-hidden'" :contentClass="'text-gray-600 leading-relaxed'" />
-        </div>
-                </div>
-                @endforeach
-            </div>
         </div>
     </div>
 </x-layouts.public>

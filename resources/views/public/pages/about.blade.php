@@ -4,10 +4,9 @@
         <section class="bg-asphaltBlack text-white pt-20 pb-24 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
             <div class="max-w-7xl mx-auto px-4 relative z-10">
-                <a href="{{ $p ?: '/' }}" class="group inline-flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-8 hover:-translate-x-1 transition-transform">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                    <span>{{ t('back_to_home') }}</span>
-                </a>
+                <x-breadcrumbs :crumbs="[
+                    ['label' => t('nav.about')],
+                ]" />
                 <div class="max-w-4xl">
                     <span class="bg-accent/10 text-accent border border-accent/30 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">{{ t('about_us') }}</span>
                     <h1 class="text-5xl md:text-7xl font-heading font-black text-white uppercase leading-none tracking-tight mb-6">

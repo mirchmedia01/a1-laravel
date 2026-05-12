@@ -2,6 +2,7 @@
 <x-layouts.public :meta="$meta ?? []">
     <section class="py-24 md:py-32 px-4 relative overflow-hidden pt-36">
         <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <x-breadcrumbs :crumbs="[['label' => $isEs ? 'Referir Amigos' : 'Refer Friends']]" />
             <h1 class="text-white font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter uppercase mb-6 leading-[1.1]">
                 {{ t('earn_100') }}<br><span class="text-accent italic">{{ t('for_each_friend_you_refer') }}</span>
             </h1>

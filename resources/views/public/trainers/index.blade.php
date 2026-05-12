@@ -3,6 +3,7 @@
     <section class="py-24 md:py-32 px-4 relative overflow-hidden pt-36">
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="max-w-7xl mx-auto relative z-10">
+            <x-breadcrumbs :crumbs="[['label' => t('nav.trainers')]]" />
             <h1 class="text-white font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter uppercase mb-6 leading-[1.1]">
                 {{ t('trainers.hero.title') }} <span class="text-accent italic inline-block py-1">A1</span>
             </h1>

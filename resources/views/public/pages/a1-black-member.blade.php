@@ -2,6 +2,7 @@
 <x-layouts.public :meta="$meta ?? []">
     <section class="py-24 md:py-32 px-4 relative overflow-hidden pt-36">
         <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <x-breadcrumbs :crumbs="[['label' => 'A1 Black']]" />
             <span class="text-accent font-black tracking-[0.3em] text-xs uppercase">{{ t('rewards_program') }}</span>
             <h1 class="text-white font-heading text-5xl md:text-8xl tracking-tighter uppercase mt-6 mb-6 leading-none">{{ t('earn_points') }}<br><span class="text-accent italic">{{ t('get_rewards') }}</span></h1>
             <p class="text-white/40 text-lg max-w-2xl mx-auto leading-relaxed">{{ $isEs
