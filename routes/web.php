@@ -6,27 +6,79 @@ use App\Http\Controllers\Public\ContactController;
 use App\Http\Controllers\Public\HomeController;
 use App\Http\Controllers\Public\PageController;
 use App\Http\Controllers\Public\ServiceController;
+use App\Http\Controllers\Public\ServiceController as Svc;
 use App\Http\Controllers\Public\SitemapController;
 use App\Http\Controllers\Public\TrainerController;
 use App\Livewire\Admin\Blog\Create;
 use App\Livewire\Admin\Blog\Edit;
 use App\Livewire\Admin\Blog\Index;
+// ─── Wix legacy pages (outside locale middleware) ───
+// These serve the same content as canonical pages but preserve the Wix URL
+use App\Services\SEOService;
 use Illuminate\Support\Facades\Route;
 
-// ─── Wix legacy 301 redirects (outside locale middleware) ───
-// Essential: Wix pages with likely traffic or SEO value
-Route::redirect('/privacy-policy', '/privacy', 301);
-Route::redirect('/terms-and-conditions', '/terms', 301);
-Route::redirect('/about-9', '/about', 301);
-Route::redirect('/testimonials', '/reviews', 301);
-Route::redirect('/referral', '/refer-friends', 301);
-Route::redirect('/loyalty', '/a1-black-member', 301);
+$canonical = fn ($url) => ['canonical' => url($url)];
+
+Route::get('/privacy-policy', function () use ($canonical) {
+    return view('public.pages.privacy', ['meta' => array_merge(SEOService::forPage('privacy', app()->getLocale()), $canonical('privacy'))]);
+});
+Route::get('/terms-and-conditions', function () use ($canonical) {
+    return view('public.pages.terms', ['meta' => array_merge(SEOService::forPage('terms', app()->getLocale()), $canonical('terms'))]);
+});
+Route::get('/about-9', function () use ($canonical) {
+    return view('public.pages.about', ['meta' => array_merge(SEOService::forPage('about', app()->getLocale()), $canonical('about'))]);
+});
+Route::get('/testimonials', function () use ($canonical) {
+    return view('public.pages.reviews', ['meta' => array_merge(SEOService::forPage('reviews', app()->getLocale()), $canonical('reviews'))]);
+});
+Route::get('/what-sets-us-apart', function () use ($canonical) {
+    return view('public.pages.about', ['meta' => array_merge(SEOService::forPage('about', app()->getLocale()), $canonical('about'))]);
+});
+Route::get('/referral', function () use ($canonical) {
+    return view('public.pages.refer-friends', ['meta' => array_merge(SEOService::forPage('refer-friends', app()->getLocale()), $canonical('refer-friends'))]);
+});
+Route::get('/loyalty', function () use ($canonical) {
+    return view('public.pages.a1-black-member', ['meta' => array_merge(SEOService::forPage('a1-black-member', app()->getLocale()), $canonical('a1-black-member'))]);
+});
+Route::get('/personal-training-packages', fn () => app(Svc::class)->show('personal-training'));
+Route::get('/boxing', fn () => app(Svc::class)->show('boxing'));
+// Blog posts: keep as redirect since slugs differ between Wix and our blog
+Route::redirect('/post/{slug}', '/blog/{slug}', 301);
+
+// Wix service sub-pages (deep links → redirect to canonical)
+Route::redirect('/personal-training-at-the-studio', '/services/personal-training/studio', 301);
+Route::redirect('/complementary-home-gym-training-session', '/services/personal-training/in-home', 301);
+Route::redirect('/complementary-home-gym-training-session-1', '/services/personal-training/in-home', 301);
+Route::redirect('/physical-therapy-at-the-studio', '/services/physical-therapy/studio', 301);
+Route::redirect('/studio-physical-therapy-consultation', '/services/physical-therapy/consult-studio', 301);
+
+// Wix internal/action pages (redirect to relevant page)
 Route::redirect('/book-online', '/services/consultations', 301);
 Route::redirect('/book-a-consult', '/services/consultations', 301);
 Route::redirect('/pre-contact-form', '/contact', 301);
-Route::redirect('/personal-training-packages', '/services/personal-training', 301);
-Route::redirect('/boxing', '/services/boxing', 301);
-Route::redirect('/post/{slug}', '/blog/{slug}', 301);
+Route::redirect('/form-submitted', '/', 301);
+Route::redirect('/payment-request-page', '/services', 301);
+Route::redirect('/pricing-plans/list', '/services', 301);
+Route::redirect('/services-4', '/services', 301);
+Route::redirect('/blank-1', '/', 301);
+Route::redirect('/blank-2', '/', 301);
+Route::redirect('/privacy-policy-1', '/privacy', 301);
+
+// Wix copy-of* duplicates (redirect to canonical)
+Route::redirect('/copy-of-home', '/', 301);
+Route::redirect('/copy-of-coach-wei', '/trainers/wei', 301);
+Route::redirect('/copy-of-coach-kate', '/trainers/kate', 301);
+Route::redirect('/copy-of-coach-jamie', '/trainers/jamie', 301);
+Route::redirect('/copy-of-coach-phillip', '/trainers/phillip', 301);
+Route::redirect('/copy-of-coach-abby', '/trainers/abby', 301);
+Route::redirect('/copy-of-personal-training-at-the-studio', '/services/personal-training/studio', 301);
+Route::redirect('/copy-of-physical-therapy-at-the-studio', '/services/physical-therapy/studio', 301);
+Route::redirect('/copy-of-physical-therapy-remote', '/services/physical-therapy/in-home', 301);
+Route::redirect('/copy-of-message-therapy-at-the-studio', '/services/massage-therapy/studio', 301);
+Route::redirect('/copy-of-message-therapy-remote', '/services/massage-therapy/in-home', 301);
+Route::redirect('/copy-of-kettlebell-course-remote', '/services/kettlebell/course', 301);
+Route::redirect('/copy-of-boxing-training-at-the-studio', '/services/boxing/studio', 301);
+Route::redirect('/copy-of-boxing-studio', '/services/boxing/studio', 301);
 Route::redirect('/coach-wei', '/trainers/wei', 301);
 Route::redirect('/coach-kate', '/trainers/kate', 301);
 Route::redirect('/coach-jamie', '/trainers/jamie', 301);

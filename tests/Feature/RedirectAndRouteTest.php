@@ -8,19 +8,17 @@ class RedirectAndRouteTest extends TestCase
 {
     // ─── Wix legacy 301 redirects ───
 
-    public function test_privacy_policy_redirects(): void
+    public function test_wix_pages_serve_content(): void
     {
-        $this->get('/privacy-policy')->assertRedirect('/privacy')->assertStatus(301);
-    }
-
-    public function test_terms_conditions_redirects(): void
-    {
-        $this->get('/terms-and-conditions')->assertRedirect('/terms')->assertStatus(301);
-    }
-
-    public function test_about_9_redirects(): void
-    {
-        $this->get('/about-9')->assertRedirect('/about')->assertStatus(301);
+        $this->get('/privacy-policy')->assertOk();
+        $this->get('/terms-and-conditions')->assertOk();
+        $this->get('/about-9')->assertOk();
+        $this->get('/boxing')->assertOk();
+        $this->get('/testimonials')->assertOk();
+        $this->get('/referral')->assertOk();
+        $this->get('/loyalty')->assertOk();
+        $this->get('/personal-training-packages')->assertOk();
+        $this->get('/what-sets-us-apart')->assertOk();
     }
 
     public function test_book_online_redirects(): void
@@ -31,31 +29,6 @@ class RedirectAndRouteTest extends TestCase
     public function test_book_consult_redirects(): void
     {
         $this->get('/book-a-consult')->assertRedirect('/services/consultations')->assertStatus(301);
-    }
-
-    public function test_boxing_redirects(): void
-    {
-        $this->get('/boxing')->assertRedirect('/services/boxing')->assertStatus(301);
-    }
-
-    public function test_testimonials_redirects(): void
-    {
-        $this->get('/testimonials')->assertRedirect('/reviews')->assertStatus(301);
-    }
-
-    public function test_referral_redirects(): void
-    {
-        $this->get('/referral')->assertRedirect('/refer-friends')->assertStatus(301);
-    }
-
-    public function test_loyalty_redirects(): void
-    {
-        $this->get('/loyalty')->assertRedirect('/a1-black-member')->assertStatus(301);
-    }
-
-    public function test_personal_training_packages_redirects(): void
-    {
-        $this->get('/personal-training-packages')->assertRedirect('/services/personal-training')->assertStatus(301);
     }
 
     public function test_pre_contact_form_redirects(): void

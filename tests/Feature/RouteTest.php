@@ -197,49 +197,22 @@ class RouteTest extends TestCase
 
     // ─── Wix 301 Redirects ───
 
-    public function test_privacy_policy_redirect(): void
+    public function test_wix_pages_serve_content(): void
     {
-        $this->get('/privacy-policy')->assertRedirect('/privacy');
-    }
-
-    public function test_terms_conditions_redirect(): void
-    {
-        $this->get('/terms-and-conditions')->assertRedirect('/terms');
-    }
-
-    public function test_about_9_redirect(): void
-    {
-        $this->get('/about-9')->assertRedirect('/about');
+        $this->get('/privacy-policy')->assertOk();
+        $this->get('/terms-and-conditions')->assertOk();
+        $this->get('/about-9')->assertOk();
+        $this->get('/testimonials')->assertOk();
+        $this->get('/what-sets-us-apart')->assertOk();
+        $this->get('/referral')->assertOk();
+        $this->get('/loyalty')->assertOk();
+        $this->get('/boxing')->assertOk();
+        $this->get('/personal-training-packages')->assertOk();
     }
 
     public function test_book_online_redirect(): void
     {
         $this->get('/book-online')->assertRedirect('/services/consultations');
-    }
-
-    public function test_boxing_redirect(): void
-    {
-        $this->get('/boxing')->assertRedirect('/services/boxing');
-    }
-
-    public function test_testimonials_redirect(): void
-    {
-        $this->get('/testimonials')->assertRedirect('/reviews');
-    }
-
-    public function test_referral_redirect(): void
-    {
-        $this->get('/referral')->assertRedirect('/refer-friends');
-    }
-
-    public function test_loyalty_redirect(): void
-    {
-        $this->get('/loyalty')->assertRedirect('/a1-black-member');
-    }
-
-    public function test_personal_training_packages_redirect(): void
-    {
-        $this->get('/personal-training-packages')->assertRedirect('/services/personal-training');
     }
 
     public function test_pre_contact_form_redirect(): void
