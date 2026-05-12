@@ -16,7 +16,7 @@ class ServiceController extends Controller
         return view('public.services.index', compact('meta', 'services', 'lang'));
     }
 
-    public function show(string $slug)
+    public function show(string $slug, ?string $canonical = null)
     {
         $lang = app()->getLocale();
         $services = load_content('services.json');
@@ -38,7 +38,14 @@ class ServiceController extends Controller
         $slugPricing = $pricing[$slug] ?? [];
         $slugSubPages = $servicePages[$slug] ?? [];
 
-        $meta = SEOService::forPage('services', $lang);
+        $meta = SEOService::forPage($slug, $lang);
+        if (empty($meta['title']) || str_contains($meta['title'], 'A1 Training Group')) {
+            $meta = SEOService::forPage('services', $lang);
+        }
+
+        if ($canonical) {
+            $meta['canonical'] = $canonical;
+        }
 
         return view('public.services.show', compact('meta', 'service', 'slugPricing', 'slugSubPages', 'lang'));
     }
