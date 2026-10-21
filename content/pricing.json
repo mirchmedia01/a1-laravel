@@ -235,32 +235,32 @@
   "kettlebell": [
     {
       "name": "4 Class Pass",
-      "price": 120,
+      "price": 130,
       "location": "any"
     },
     {
       "name": "Kettle Bell Class",
-      "price": 35,
+      "price": 45,
       "location": "any"
     }
   ],
   "boxing": [
     {
       "name": "1 Pack - Home Gym Boxing",
-      "price": 120,
+      "price": 150,
       "location": "home"
     },
     {
       "name": "3 Pack - Home Gym Boxing",
-      "price": 345,
+      "price": 435,
       "location": "home",
-      "perSession": 115
+      "perSession": 145
     },
     {
       "name": "8 Pack - Home Gym Boxing",
-      "price": 840,
+      "price": 1120,
       "location": "home",
-      "perSession": 105
+      "perSession": 140
     },
     {
       "name": "1 Pack - A1's Boxing",
@@ -302,49 +302,49 @@
   "massage-therapy": [
     {
       "name": "Sports Massage - Studio",
-      "price": 180,
+      "price": 190,
       "location": "gym",
       "duration": "60min"
     },
     {
       "name": "Sports Massage - In-Home",
-      "price": 220,
+      "price": 230,
       "location": "home",
       "duration": "60min"
     },
     {
       "name": "Deep Tissue & Medical Massage - Studio",
-      "price": 200,
+      "price": 210,
       "location": "gym",
       "duration": "60min"
     },
     {
       "name": "Deep Tissue & Medical Massage - In-Home",
-      "price": 240,
+      "price": 250,
       "location": "home",
       "duration": "60min"
     },
     {
       "name": "Executive Decompression Therapy - Studio",
-      "price": 250,
+      "price": 260,
       "location": "gym",
       "duration": "75min"
     },
     {
       "name": "Executive Decompression Therapy - In-Home",
-      "price": 300,
+      "price": 310,
       "location": "home",
       "duration": "75min"
     },
     {
       "name": "Lymphatic Drainage - Studio",
-      "price": 200,
+      "price": 210,
       "location": "gym",
       "duration": "60min"
     },
     {
       "name": "Lymphatic Drainage - In-Home",
-      "price": 240,
+      "price": 250,
       "location": "home",
       "duration": "60min"
     }
@@ -352,7 +352,7 @@
   "registered-dietitians": [
     {
       "name": "Registered Dietitian Consultation",
-      "price": 150,
+      "price": 160,
       "location": "virtual"
     }
   ]

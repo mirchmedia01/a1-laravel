@@ -32,11 +32,11 @@
         'personal-training' => [['label' => 'Locations', 'value' => 'Gym + Home'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$160']],
         'partner-training' => [['label' => 'Per Person', 'value' => 'From $145'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Locations', 'value' => 'Gym + Home']],
         'physical-therapy' => [['label' => 'Credentials', 'value' => 'DPT Level'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$235']],
-        'massage-therapy' => [['label' => 'Modalities', 'value' => 'Sports + Deep'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$180']],
-        'kettlebell' => [['label' => 'Format', 'value' => 'Group Class'], ['label' => 'Session Length', 'value' => '45 min'], ['label' => 'Drop-in', 'value' => '$35']],
-        'boxing' => [['label' => 'Locations', 'value' => 'Gym + Home'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$120']],
+        'massage-therapy' => [['label' => 'Modalities', 'value' => 'Sports + Deep'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$190']],
+        'kettlebell' => [['label' => 'Format', 'value' => 'Group Class'], ['label' => 'Session Length', 'value' => '45 min'], ['label' => 'Drop-in', 'value' => '$45']],
+        'boxing' => [['label' => 'Locations', 'value' => 'Gym + Home'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$150']],
         'online-hybrid' => [['label' => 'Format', 'value' => 'Video + App'], ['label' => 'Flexibility', 'value' => '24/7'], ['label' => 'Starting At', 'value' => '$100']],
-        'registered-dietitians' => [['label' => 'Format', 'value' => 'Virtual'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$150']],
+        'registered-dietitians' => [['label' => 'Format', 'value' => 'Virtual'], ['label' => 'Session Length', 'value' => '60 min'], ['label' => 'Starting At', 'value' => '$160']],
         'consultations' => [['label' => 'Format', 'value' => 'Phone + In-Person'], ['label' => 'Duration', 'value' => '15-60 min'], ['label' => 'Cost', 'value' => 'FREE / $275']],
     ]; @endphp
     @if(!empty($serviceStats[$service['slug']]))
