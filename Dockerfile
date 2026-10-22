@@ -1,4 +1,4 @@
-FROM php:8.4-cli-alpine AS base
+FROM php:8.4.27-cli-alpine AS base
 
 RUN apk add --no-cache \
     bash curl git libpng-dev libjpeg-turbo-dev libwebp-dev libxml2-dev \
@@ -31,6 +31,9 @@ RUN mkdir -p storage/logs storage/framework/cache storage/framework/sessions \
     && chmod -R 775 storage bootstrap/cache
 
 EXPOSE 8080
+
+# CVE-2026-109619 interim mitigation (PHP security advisory 2026-10-20)
+RUN printf "session.upload_progress.enabled=0\n" > /usr/local/etc/php/conf.d/zz-upload-progress.ini
 
 CMD php artisan config:cache \
     && php artisan route:cache \
