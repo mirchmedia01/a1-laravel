@@ -1,5 +1,5 @@
 @php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
-<section class="py-16 md:py-24 px-4 md:px-6 bg-white rounded-[40px] md:rounded-[60px] mx-2 md:mx-0 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
+<section class="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-6 bg-white rounded-[40px] md:rounded-[60px] mx-2 md:mx-0 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
         <div class="relative">
             <div class="aspect-square rounded-[30px] md:rounded-[40px] overflow-hidden border-8 md:border-[12px] border-black shadow-2xl group">

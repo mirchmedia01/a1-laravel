@@ -19,10 +19,9 @@
         @foreach($allTrainers as $trainer)
         <a href="{{ $p }}/trainers/{{ $trainer['slug'] }}" class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-accent/50 hover:-translate-y-0.5 transition-all text-center p-3">
             <div class="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full overflow-hidden border-2 border-gray-100 group-hover:border-accent/50">
-                <img src="{{ $trainer['image'] ?? '' }}" alt="{{ $trainer['name'] }}" class="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
+                <img src="{{ $trainer['image'] ?? '' }}" alt="{{ $trainer['name'] }}" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500" loading="lazy">
             </div>
-            <div class="mt-2 text-sm font-black text-asphaltBlack leading-tight">{{ $trainer['name'] }}</div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400 truncate">{{ $isEs && !empty($trainer['titleEs']) ? $trainer['titleEs'] : ($trainer['title'] ?? '') }}</div>
+            <div class="mt-3 text-sm font-black text-asphaltBlack leading-tight">{{ $trainer['name'] }}</div>
         </a>
         @endforeach
     </div>
