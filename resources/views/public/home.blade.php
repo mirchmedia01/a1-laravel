@@ -1,6 +1,6 @@
 <x-layouts.public :meta="$meta ?? []">
     <x-sections.hero />
-    <section class="py-12 md:py-16 px-4 md:px-6 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
+    <section class="pb-12 md:pb-16 px-4 md:px-6 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
         <div class="max-w-7xl mx-auto">
             <x-sections.available-trainers :trainers="$trainers" />
         </div>

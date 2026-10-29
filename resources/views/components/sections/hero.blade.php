@@ -1,5 +1,5 @@
 @php $isEs = app()->getLocale() === 'es'; $p = $isEs ? '/es' : ''; @endphp
-<section class="pt-24 md:pt-32 pb-12 md:pb-20 px-4 bg-black relative overflow-hidden" x-intersect="$el.classList.add('is-visible')">
+<section class="pt-24 md:pt-32 pb-12 md:pb-16 px-4 bg-black relative overflow-hidden" x-intersect="$el.classList.add('is-visible')">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-1/4 left-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-accent/5 rounded-full blur-[80px] md:blur-[120px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-accent/3 rounded-full blur-[60px] md:blur-[100px]"></div>
