@@ -56,7 +56,7 @@
                     </div>
                     <a href="{{ $p }}/trainers" class="text-xs font-black uppercase tracking-widest text-accent hover:text-asphaltBlack">{{ $isEs ? 'Ver Todos' : 'View All' }} &rarr;</a>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
                     @foreach($contactTrainers as $trainer)
                     <a href="{{ $p }}/trainers/{{ $trainer['slug'] }}" class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-accent/50 hover:-translate-y-0.5 transition-all text-center p-3">
                         <div class="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full overflow-hidden border-2 border-gray-100 group-hover:border-accent/50">
@@ -68,6 +68,8 @@
                     @endforeach
                 </div>
             </div>
+
+            <x-sections.featured-trainer :trainers="$contactTrainers" />
 
             <!-- Mindbody Appointments & Trainer Schedule Widget -->
             <div id="schedule" class="mt-16 bg-white rounded-3xl shadow-xl border border-gray-100 p-6 md:p-10 scroll-mt-24">

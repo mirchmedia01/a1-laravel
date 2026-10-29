@@ -1,5 +1,6 @@
 <x-layouts.public :meta="$meta ?? []">
     <x-sections.hero />
+    <x-sections.featured-trainer :trainers="$trainers" />
     <x-sections.booking :trainers="$trainers" :services="$services" />
     <x-sections.about />
     <x-sections.quote />

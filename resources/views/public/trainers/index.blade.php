@@ -46,7 +46,7 @@
 
         {{-- Row Below: 4 Trainers in a row --}}
         @if(!empty($rowBelowTrainers))
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-6">
             @foreach($rowBelowTrainers as $trainer)
             @php
                 $slug = $trainer['slug'] ?? '';

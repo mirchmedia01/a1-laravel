@@ -106,7 +106,7 @@ class ContentIntegrityTest extends TestCase
     public function test_trainers_json_is_valid(): void
     {
         $trainers = $this->loadJson('trainers.json');
-        $this->assertCount(7, $trainers);
+        $this->assertCount(8, $trainers);
 
         foreach ($trainers as $trainer) {
             $this->assertArrayHasKey('slug', $trainer);

@@ -127,5 +127,22 @@
     ],
     "instagram": "https://www.instagram.com/a1traininggroup/",
     "order": 7
+  },
+  {
+    "id": "coach-neil",
+    "slug": "neil",
+    "name": "Neil",
+    "title": "Brooklyn-Based Fitness Professional",
+    "titleEs": "Profesional del Fitness con Base en Brooklyn",
+    "certifications": ["CPT"],
+    "image": "/images/trainers/neil.webp",
+    "bio": "A Brooklyn-based fitness professional dedicated to helping you move better, build strength, and achieve your athletic potential.",
+    "bioEs": "Un profesional del fitness con base en Brooklyn, dedicado a ayudarte a moverte mejor, desarrollar fuerza y alcanzar tu potencial atlético.",
+    "longBio": "Hi, I'm Neil, a Brooklyn-based fitness professional dedicated to helping people move better, build strength, and achieve their athletic potential.\n\nAt 38, I believe fitness should empower you to live fully—both inside and outside the gym. My coaching approach blends high-performance athletic training with functional movement, helping clients build speed, agility, and sustainable strength for everyday life.",
+    "longBioEs": "Hola, soy Neil, un profesional del fitness con base en Brooklyn dedicado a ayudar a las personas a moverse mejor, desarrollar fuerza y alcanzar su potencial atlético.\n\nA mis 38 años, creo que el fitness debe empoderarte para vivir plenamente, tanto dentro como fuera del gimnasio. Mi enfoque de coaching combina el entrenamiento atlético de alto rendimiento con el movimiento funcional, ayudando a los clientes a desarrollar velocidad, agilidad y una fuerza sostenible para la vida diaria.",
+    "specialties": ["Athletic Training", "Functional Movement", "Speed & Agility", "Sustainable Strength"],
+    "specialtiesEs": ["Entrenamiento Atlético", "Movimiento Funcional", "Velocidad y Agilidad", "Fuerza Sostenible"],
+    "instagram": "https://www.instagram.com/a1traininggroup/",
+    "order": 8
   }
 ]
