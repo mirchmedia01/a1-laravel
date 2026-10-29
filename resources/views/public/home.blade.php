@@ -1,6 +1,10 @@
 <x-layouts.public :meta="$meta ?? []">
     <x-sections.hero />
-    <x-sections.featured-trainer :trainers="$trainers" />
+    <section class="py-12 md:py-16 px-4 md:px-6 scroll-reveal" x-intersect="$el.classList.add('is-visible')">
+        <div class="max-w-7xl mx-auto">
+            <x-sections.available-trainers :trainers="$trainers" />
+        </div>
+    </section>
     <x-sections.booking :trainers="$trainers" :services="$services" />
     <x-sections.about />
     <x-sections.quote />

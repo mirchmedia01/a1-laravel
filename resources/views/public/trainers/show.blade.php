@@ -14,7 +14,7 @@
                         $localImg = '/images/trainers/' . $slug . '.webp';
                         $img = file_exists(public_path($localImg)) ? $localImg : ($trainer['image'] ?? 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=1000&fit=crop');
                     @endphp
-                    <div class="aspect-4/5 rounded-[50px] overflow-hidden border border-white/10 group shadow-2xl relative">
+                    <div class="aspect-[4/5] rounded-[50px] overflow-hidden border border-white/10 group shadow-2xl relative">
                         <img src="{{ $img }}" alt="{{ $trainer['name'] }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
                         <div class="absolute top-8 left-8">
                             <span class="bg-accent text-black px-6 py-2 rounded-full font-black uppercase text-[10px] tracking-widest shadow-2xl border-2 border-black/20">A1 Master Coach</span>

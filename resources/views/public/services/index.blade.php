@@ -18,7 +18,7 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach($services as $i => $service)
             <a href="{{ $p }}/services/{{ $service['slug'] }}"
-               class="{{ $i === 0 ? 'lg:col-span-2 lg:row-span-2 aspect-4/5 lg:aspect-auto' : 'aspect-4/5' }} group relative rounded-[40px] overflow-hidden border border-white/5 hover:border-accent/40 transition-all duration-700 block shadow-2xl">
+               class="{{ $i === 0 ? 'lg:col-span-2 lg:row-span-2 aspect-[4/5] lg:aspect-auto' : 'aspect-[4/5]' }} group relative rounded-[40px] overflow-hidden border border-white/5 hover:border-accent/40 transition-all duration-700 block shadow-2xl">
                 <img src="{{ $service['image'] ?? '' }}" alt="{{ $isEs && !empty($service['titleEs']) ? $service['titleEs'] : $service['title'] }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black"></div>
                 <div class="absolute bottom-8 left-8 right-8 z-10">

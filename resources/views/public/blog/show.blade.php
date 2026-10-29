@@ -90,7 +90,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     @foreach($relatedBlogs as $rb)
                     <a href="{{ $p }}/blog/{{ $rb['slug'] }}" class="group bg-white/3 border border-white/10 rounded-[30px] overflow-hidden hover:border-accent/40 transition-all">
-                        <div class="aspect-16/9 overflow-hidden">
+                        <div class="aspect-[16/9] overflow-hidden">
                             <img src="{{ $rb['coverImage'] ?? '/images/training/personal-training-hero.webp' }}" alt="{{ $rb['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
                         <div class="p-6">
